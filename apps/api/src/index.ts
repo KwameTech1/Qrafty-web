@@ -11,6 +11,8 @@ import morgan from "morgan";
 import { getEnv } from "./env";
 import { authRouter } from "./routes/auth";
 import { dashboardRouter } from "./routes/dashboard";
+import { publicRouter } from "./routes/public";
+import { qrCardsRouter } from "./routes/qrCards";
 
 const envPath = path.resolve(__dirname, "..", ".env");
 const dotenvResult = dotenv.config({ path: envPath });
@@ -39,6 +41,8 @@ app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
 
 app.use("/auth", authRouter(env));
 app.use("/dashboard", dashboardRouter(env));
+app.use("/qr-cards", qrCardsRouter(env));
+app.use("/public", publicRouter());
 
 app.get("/health", (_req, res) => {
   const googleOAuthConfigured = Boolean(

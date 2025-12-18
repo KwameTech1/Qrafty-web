@@ -7,6 +7,8 @@ import RequireAuth from "./auth/RequireAuth";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/app/Dashboard";
 import Placeholder from "./pages/app/Placeholder";
+import QrCards from "./pages/app/QrCards";
+import PublicProfile from "./pages/PublicProfile";
 
 function App() {
   return (
@@ -14,19 +16,12 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/p/:publicId" element={<PublicProfile />} />
 
       <Route element={<RequireAuth />}>
         <Route element={<DashboardLayout />}>
           <Route path="/app" element={<Dashboard />} />
-          <Route
-            path="/app/qr"
-            element={
-              <Placeholder
-                title="QR Editor"
-                description="Create and manage QR cards that link to your public profile."
-              />
-            }
-          />
+          <Route path="/app/qr" element={<QrCards />} />
           <Route
             path="/app/analytics"
             element={
