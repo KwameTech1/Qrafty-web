@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: qrafty
+      POSTGRES_PASSWORD: qrafty
+      POSTGRES_DB: qrafty
+    ports:
+      - "5432:5432"
+    volumes:
+      - qrafty_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qrafty -d qrafty"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  qrafty_db:

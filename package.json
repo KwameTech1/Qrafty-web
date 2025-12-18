@@ -1,0 +1,33 @@
+{
+  "name": "qrafty-web",
+  "version": "1.0.0",
+  "description": "A QR-code for businesses.",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,magenta \"npm run dev -w web\" \"npm run dev -w api\"",
+    "dev:web": "npm run dev -w web",
+    "dev:api": "npm run dev -w api",
+    "build": "npm run build -w web && npm run build -w api",
+    "lint": "npm run lint -w web && npm run lint -w api",
+    "format": "prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KwameTech1/Qrafty-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KwameTech1/Qrafty-web/issues"
+  },
+  "homepage": "https://github.com/KwameTech1/Qrafty-web#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.6.2"
+  }
+}

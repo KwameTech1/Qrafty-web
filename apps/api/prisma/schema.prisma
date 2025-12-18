@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+enum InteractionType {
+  SCAN
+  CONTACT
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String?
+  googleId     String?  @unique
+
+  emailVerified Boolean @default(false)
+
+  displayName  String?
+  bio          String?
+  phone        String?
+  website      String?
+  company      String?
+  title        String?
+  location     String?
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  qrCards      QRCard[]
+  businesses   BusinessProfile[]
+}
+
+model QRCard {
+  id        String   @id @default(cuid())
+  userId    String
+  label     String
+  publicId  String   @unique
+  isActive  Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  interactions Interaction[]
+}
+
+model Interaction {
+  id         String          @id @default(cuid())
+  qrCardId   String
+  type       InteractionType
+  occurredAt DateTime        @default(now())
+  userAgent  String?
+  referrer   String?
+
+  qrCard QRCard @relation(fields: [qrCardId], references: [id], onDelete: Cascade)
+
+  @@index([qrCardId, occurredAt])
+}
+
+model BusinessProfile {
+  id            String   @id @default(cuid())
+  ownerId       String
+
+  name          String
+  description   String?
+  industry      String
+  location      String
+  startingPrice Int?
+  website       String?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  @@index([industry])
+  @@index([location])
+}
