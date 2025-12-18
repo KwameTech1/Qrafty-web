@@ -7,13 +7,14 @@ import Signup from "./pages/Signup";
 import RequireAuth from "./auth/RequireAuth";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/app/Dashboard";
-import Placeholder from "./pages/app/Placeholder";
-import PublicProfile from "./pages/PublicProfile";
+const PublicProfile = lazy(() => import("./pages/PublicProfile"));
 
 const QrCards = lazy(() => import("./pages/app/QrCards"));
 const Analytics = lazy(() => import("./pages/app/Analytics"));
 const Inventory = lazy(() => import("./pages/app/Inventory"));
 const Interactions = lazy(() => import("./pages/app/Interactions"));
+const Marketplace = lazy(() => import("./pages/app/Marketplace"));
+const MarketplaceDetail = lazy(() => import("./pages/app/MarketplaceDetail"));
 
 function RouteLoading() {
   return (
@@ -31,7 +32,14 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/p/:publicId" element={<PublicProfile />} />
+      <Route
+        path="/p/:publicId"
+        element={
+          <Suspense fallback={<RouteLoading />}>
+            <PublicProfile />
+          </Suspense>
+        }
+      />
 
       <Route element={<RequireAuth />}>
         <Route element={<DashboardLayout />}>
@@ -71,10 +79,17 @@ function App() {
           <Route
             path="/app/marketplace"
             element={
-              <Placeholder
-                title="Marketplace"
-                description="Discover businesses and view profiles."
-              />
+              <Suspense fallback={<RouteLoading />}>
+                <Marketplace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/app/marketplace/:id"
+            element={
+              <Suspense fallback={<RouteLoading />}>
+                <MarketplaceDetail />
+              </Suspense>
             }
           />
         </Route>

@@ -14,6 +14,7 @@ import { analyticsRouter } from "./routes/analytics";
 import { dashboardRouter } from "./routes/dashboard";
 import { interactionsRouter } from "./routes/interactions";
 import { inventoryRouter } from "./routes/inventory";
+import { marketplaceRouter } from "./routes/marketplace";
 import { publicRouter } from "./routes/public";
 import { qrCardsRouter } from "./routes/qrCards";
 
@@ -47,6 +48,7 @@ app.use("/analytics", analyticsRouter(env));
 app.use("/dashboard", dashboardRouter(env));
 app.use("/interactions", interactionsRouter(env));
 app.use("/inventory", inventoryRouter(env));
+app.use("/marketplace", marketplaceRouter(env));
 app.use("/qr-cards", qrCardsRouter(env));
 app.use("/public", publicRouter());
 

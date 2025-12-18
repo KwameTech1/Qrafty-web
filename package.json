@@ -11,6 +11,7 @@
     "dev": "concurrently -n web,api -c cyan,magenta \"npm run dev -w web\" \"npm run dev -w api\"",
     "dev:web": "npm run dev -w web",
     "dev:api": "npm run dev -w api",
+    "db:studio": "npm run db:studio -w api",
     "build": "npm run build -w web && npm run build -w api",
     "lint": "npm run lint -w web && npm run lint -w api",
     "format": "prettier -w ."
