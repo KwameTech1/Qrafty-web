@@ -4,8 +4,8 @@ QRAFTY is a QR-based digital identity + B2B interaction platform.
 
 ## Repo structure
 
-- apps/web: React + Vite + TypeScript + Tailwind + React Router
-- apps/api: Node.js + Express + TypeScript + PostgreSQL (via Prisma)
+- frontend/web: React + Vite + TypeScript + Tailwind + React Router
+- backend/api: Node.js + Express + TypeScript + PostgreSQL (via Prisma)
 
 ## Local development
 
@@ -17,8 +17,8 @@ Run:
 
 ### 2) Configure environment
 
-- Copy apps/api/.env.example to apps/api/.env and set values
-- Copy apps/web/.env.example to apps/web/.env (optional for now)
+- Copy backend/api/.env.example to backend/api/.env and set values
+- Copy frontend/web/.env.example to frontend/web/.env (optional for now)
 
 ### 3) Install dependencies
 

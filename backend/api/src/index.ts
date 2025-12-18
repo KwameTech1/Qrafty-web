@@ -10,6 +10,7 @@ import morgan from "morgan";
 
 import { getEnv } from "./env";
 import { authRouter } from "./routes/auth";
+import { analyticsRouter } from "./routes/analytics";
 import { dashboardRouter } from "./routes/dashboard";
 import { publicRouter } from "./routes/public";
 import { qrCardsRouter } from "./routes/qrCards";
@@ -40,6 +41,7 @@ app.use(cookieParser());
 app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
 
 app.use("/auth", authRouter(env));
+app.use("/analytics", analyticsRouter(env));
 app.use("/dashboard", dashboardRouter(env));
 app.use("/qr-cards", qrCardsRouter(env));
 app.use("/public", publicRouter());
