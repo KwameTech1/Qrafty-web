@@ -9,6 +9,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 import { getEnv } from "./env";
+import { applySecurity } from "./middleware/security";
 import { authRouter } from "./routes/auth";
 import { analyticsRouter } from "./routes/analytics";
 import { dashboardRouter } from "./routes/dashboard";
@@ -38,6 +39,7 @@ const env = getEnv();
 const app = express();
 
 app.use(helmet());
+applySecurity(app);
 app.use(cors({ origin: env.WEB_ORIGIN, credentials: true }));
 app.use(express.json({ limit: "1mb" }));
 app.use(cookieParser());

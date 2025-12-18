@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: qrafty-api
+    env: node
+    rootDir: backend/api
+    plan: starter
+    buildCommand: npm ci && npm run prisma:generate && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: qrafty-db
+          property: connectionString
+      # Set these in Render dashboard (or add here if you prefer)
+      # - key: WEB_ORIGIN
+      # - key: JWT_SECRET
+      # - key: GOOGLE_CLIENT_ID
+      # - key: GOOGLE_CLIENT_SECRET
+      # - key: GOOGLE_REDIRECT_URL
+
+databases:
+  - name: qrafty-db
+    plan: starter
