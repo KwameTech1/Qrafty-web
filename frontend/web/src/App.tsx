@@ -12,6 +12,8 @@ import PublicProfile from "./pages/PublicProfile";
 
 const QrCards = lazy(() => import("./pages/app/QrCards"));
 const Analytics = lazy(() => import("./pages/app/Analytics"));
+const Inventory = lazy(() => import("./pages/app/Inventory"));
+const Interactions = lazy(() => import("./pages/app/Interactions"));
 
 function RouteLoading() {
   return (
@@ -53,19 +55,17 @@ function App() {
           <Route
             path="/app/inventory"
             element={
-              <Placeholder
-                title="Inventory"
-                description="Manage your QR cards and digital assets."
-              />
+              <Suspense fallback={<RouteLoading />}>
+                <Inventory />
+              </Suspense>
             }
           />
           <Route
             path="/app/interactions"
             element={
-              <Placeholder
-                title="Interactions"
-                description="Review scan history and contact events."
-              />
+              <Suspense fallback={<RouteLoading />}>
+                <Interactions />
+              </Suspense>
             }
           />
           <Route

@@ -12,6 +12,8 @@ import { getEnv } from "./env";
 import { authRouter } from "./routes/auth";
 import { analyticsRouter } from "./routes/analytics";
 import { dashboardRouter } from "./routes/dashboard";
+import { interactionsRouter } from "./routes/interactions";
+import { inventoryRouter } from "./routes/inventory";
 import { publicRouter } from "./routes/public";
 import { qrCardsRouter } from "./routes/qrCards";
 
@@ -43,6 +45,8 @@ app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
 app.use("/auth", authRouter(env));
 app.use("/analytics", analyticsRouter(env));
 app.use("/dashboard", dashboardRouter(env));
+app.use("/interactions", interactionsRouter(env));
+app.use("/inventory", inventoryRouter(env));
 app.use("/qr-cards", qrCardsRouter(env));
 app.use("/public", publicRouter());
 

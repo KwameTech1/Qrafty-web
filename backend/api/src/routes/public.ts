@@ -61,5 +61,30 @@ export function publicRouter() {
     });
   });
 
+  // Log a CONTACT interaction when a visitor taps the Contact CTA.
+  router.post("/qr/:publicId/contact", async (req: Request, res: Response) => {
+    const publicId = req.params.publicId;
+
+    const qrCard = await prisma.qRCard.findUnique({
+      where: { publicId },
+      select: { id: true, isActive: true },
+    });
+
+    if (!qrCard || !qrCard.isActive) {
+      return res.status(404).json({ error: "Not found" });
+    }
+
+    await prisma.interaction.create({
+      data: {
+        qrCardId: qrCard.id,
+        type: "CONTACT",
+        userAgent: req.get("user-agent") ?? null,
+        referrer: req.get("referer") ?? null,
+      },
+    });
+
+    return res.status(204).send();
+  });
+
   return router;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { apiFetch } from "../lib/api";
+import { apiFetch, getApiUrl } from "../lib/api";
 
 type PublicResponse = {
   qrCard: { id: string; label: string; publicId: string };
@@ -21,6 +21,27 @@ export default function PublicProfile() {
   const { publicId } = useParams();
   const [data, setData] = useState<PublicResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const trackContact = () => {
+    if (!publicId) return;
+    const url = `${getApiUrl()}/public/qr/${publicId}/contact`;
+
+    try {
+      if (typeof navigator !== "undefined" && "sendBeacon" in navigator) {
+        const blob = new Blob([], { type: "text/plain" });
+        navigator.sendBeacon(url, blob);
+        return;
+      }
+    } catch {
+      // ignore
+    }
+
+    try {
+      void fetch(url, { method: "POST", keepalive: true });
+    } catch {
+      // ignore
+    }
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -106,6 +127,7 @@ export default function PublicProfile() {
           <a
             className="block rounded-md bg-slate-900 px-4 py-2 text-center text-sm font-medium text-white hover:bg-slate-800"
             href={`mailto:${data.profile.email}`}
+            onClick={() => trackContact()}
           >
             Contact
           </a>
