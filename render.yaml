@@ -1,10 +1,11 @@
 services:
   - type: web
     name: qrafty-api
-    env: node
+    runtime: node
     rootDir: backend/api
     plan: starter
-    buildCommand: npm ci && npm run prisma:migrate:deploy && npm run build
+    buildCommand: npm ci --include=dev && npm run prisma:generate && npm run build
+    preDeployCommand: npm run prisma:migrate:deploy
     startCommand: npm run start
     healthCheckPath: /health
     envVars:
