@@ -87,8 +87,8 @@ export default function Analytics() {
                 className={
                   "rounded px-2 py-1 text-xs font-medium " +
                   (days === d
-                    ? "bg-slate-900 text-white"
-                    : "text-slate-700 hover:bg-slate-50")
+                    ? "bg-blue-600 text-white"
+                    : "text-slate-700 hover:bg-blue-50")
                 }
                 onClick={() => setDays(d)}
               >
@@ -131,7 +131,7 @@ export default function Analytics() {
         ) : !hasAnyData ? (
           <p className="mt-4 text-sm text-slate-600">No activity yet.</p>
         ) : (
-          <div className="mt-4 h-64">
+          <div className="mt-4 h-64 text-blue-600">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={overview.series} margin={{ left: 8, right: 8 }}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -141,14 +141,15 @@ export default function Analytics() {
                 <Line
                   type="monotone"
                   dataKey="scans"
-                  stroke="#0f172a"
+                  stroke="currentColor"
                   strokeWidth={2}
                   dot={false}
                 />
                 <Line
                   type="monotone"
                   dataKey="contacts"
-                  stroke="#64748b"
+                  stroke="currentColor"
+                  strokeOpacity={0.45}
                   strokeWidth={2}
                   dot={false}
                 />

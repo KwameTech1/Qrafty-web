@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAuth } from "../auth/AuthContext";
 import { apiFetch, getApiUrl } from "../lib/api";
+import Footer from "../components/Footer";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -48,91 +49,98 @@ export default function Login() {
   };
 
   return (
-    <main className="min-h-screen p-6">
-      <div className="mx-auto w-full max-w-md">
-        <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
-        <p className="mt-2 text-sm text-slate-600">
-          Welcome back. Sign in to manage your QRAFTY profile and QR cards.
-        </p>
+    <main className="flex min-h-screen flex-col bg-white">
+      <div className="flex-1 p-6">
+        <div className="mx-auto w-full max-w-md">
+          <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
+          <p className="mt-2 text-sm text-slate-600">
+            Welcome back. Sign in to manage your QRAFTY profile and QR cards.
+          </p>
 
-        <a
-          className="mt-6 flex w-full items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 disabled:opacity-60"
-          href={`${getApiUrl()}/auth/google/start`}
-          onClick={() => {
-            if (import.meta.env.DEV) {
-              console.debug(
-                `[auth] google start -> ${getApiUrl()}/auth/google/start`
-              );
-            }
-          }}
-        >
-          Continue with Google
-        </a>
-
-        <div className="my-6 flex items-center gap-3">
-          <div className="h-px flex-1 bg-slate-200" />
-          <span className="text-xs text-slate-500">or</span>
-          <div className="h-px flex-1 bg-slate-200" />
-        </div>
-
-        <form onSubmit={onSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Email
-            </label>
-            <input
-              className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400"
-              type="email"
-              autoComplete="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Password
-            </label>
-            <input
-              className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400"
-              type="password"
-              autoComplete="current-password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              minLength={8}
-            />
-          </div>
-
-          {oauthMessage ? (
-            <p className="text-sm text-red-600" role="alert">
-              {oauthMessage}
-            </p>
-          ) : null}
-
-          {error ? (
-            <p className="text-sm text-red-600" role="alert">
-              {error}
-            </p>
-          ) : null}
-
-          <button
-            className="w-full rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800 disabled:opacity-60"
-            type="submit"
-            disabled={loading}
+          <a
+            className="mt-6 flex w-full items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 disabled:opacity-60"
+            href={`${getApiUrl()}/auth/google/start`}
+            onClick={() => {
+              if (import.meta.env.DEV) {
+                console.debug(
+                  `[auth] google start -> ${getApiUrl()}/auth/google/start`
+                );
+              }
+            }}
           >
-            {loading ? "Signing in…" : "Sign in"}
-          </button>
-        </form>
+            Continue with Google
+          </a>
 
-        <p className="mt-6 text-sm text-slate-600">
-          Don’t have an account?{" "}
-          <Link className="text-slate-900 underline" to="/signup">
-            Sign up
-          </Link>
-        </p>
+          <div className="my-6 flex items-center gap-3">
+            <div className="h-px flex-1 bg-slate-200" />
+            <span className="text-xs text-slate-500">or</span>
+            <div className="h-px flex-1 bg-slate-200" />
+          </div>
+
+          <form onSubmit={onSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700">
+                Email
+              </label>
+              <input
+                className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-400"
+                type="email"
+                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700">
+                Password
+              </label>
+              <input
+                className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-400"
+                type="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                minLength={8}
+              />
+            </div>
+
+            {oauthMessage ? (
+              <p className="text-sm text-red-600" role="alert">
+                {oauthMessage}
+              </p>
+            ) : null}
+
+            {error ? (
+              <p className="text-sm text-red-600" role="alert">
+                {error}
+              </p>
+            ) : null}
+
+            <button
+              className="w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? "Signing in…" : "Sign in"}
+            </button>
+          </form>
+
+          <p className="mt-6 text-sm text-slate-600">
+            Don’t have an account?{" "}
+            <Link
+              className="text-blue-700 underline hover:text-blue-800"
+              to="/signup"
+            >
+              Sign up
+            </Link>
+          </p>
+        </div>
       </div>
+
+      <Footer />
     </main>
   );
 }

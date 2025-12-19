@@ -5,3 +5,52 @@ body,
 #root {
   height: 100%;
 }
+
+@keyframes qrafty-scanline {
+  0% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  55% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+}
+
+.qrafty-hero-scanline {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  pointer-events: none;
+}
+
+.qrafty-hero-scanline::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: 0;
+  height: 14%;
+  background: linear-gradient(
+    to bottom,
+    rgb(from currentColor r g b / 0),
+    rgb(from currentColor r g b / 0.12),
+    rgb(from currentColor r g b / 0)
+  );
+  transform: translateY(-110%);
+  animation: qrafty-scanline 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qrafty-hero-scanline::before {
+    animation: none;
+    display: none;
+  }
+}

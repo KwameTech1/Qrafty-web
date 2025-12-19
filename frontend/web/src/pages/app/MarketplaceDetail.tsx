@@ -51,14 +51,19 @@ export default function MarketplaceDetail() {
   }, [id]);
 
   if (loading) {
-    return <div className="text-sm text-muted-foreground">Loading…</div>;
+    return <div className="text-sm text-slate-600">Loading…</div>;
   }
 
   if (error) {
     return (
       <div className="space-y-3">
-        <div className="text-sm text-red-600">{error}</div>
-        <Link className="text-sm underline" to="/app/marketplace">
+        <div className="text-sm text-red-600" role="alert">
+          {error}
+        </div>
+        <Link
+          className="text-sm text-blue-700 underline hover:text-blue-800"
+          to="/app/marketplace"
+        >
           Back to Marketplace
         </Link>
       </div>
@@ -68,8 +73,11 @@ export default function MarketplaceDetail() {
   if (!item) {
     return (
       <div className="space-y-3">
-        <div className="text-sm text-muted-foreground">Not found.</div>
-        <Link className="text-sm underline" to="/app/marketplace">
+        <div className="text-sm text-slate-600">Not found.</div>
+        <Link
+          className="text-sm text-blue-700 underline hover:text-blue-800"
+          to="/app/marketplace"
+        >
           Back to Marketplace
         </Link>
       </div>
@@ -79,29 +87,32 @@ export default function MarketplaceDetail() {
   return (
     <div className="space-y-6">
       <div className="space-y-1">
-        <Link className="text-sm underline" to="/app/marketplace">
+        <Link
+          className="text-sm text-blue-700 underline hover:text-blue-800"
+          to="/app/marketplace"
+        >
           Back to Marketplace
         </Link>
-        <h1 className="text-xl font-semibold">{item.name}</h1>
-        <div className="text-sm text-muted-foreground">
+        <h1 className="text-xl font-semibold text-slate-900">{item.name}</h1>
+        <div className="text-sm text-slate-600">
           {item.industry} · {item.location}
           {item.startingPrice !== null ? ` · from $${item.startingPrice}` : ""}
         </div>
       </div>
 
       {item.description ? (
-        <div className="rounded-lg border bg-card p-4 text-sm leading-relaxed">
+        <div className="rounded-lg border border-slate-200 bg-white p-4 text-sm leading-relaxed text-slate-700">
           {item.description}
         </div>
       ) : null}
 
-      <div className="rounded-lg border bg-card p-4 text-sm">
+      <div className="rounded-lg border border-slate-200 bg-white p-4 text-sm">
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           <div>
-            <div className="text-muted-foreground">Website</div>
+            <div className="text-slate-600">Website</div>
             {item.website ? (
               <a
-                className="underline"
+                className="text-blue-700 underline hover:text-blue-800"
                 href={item.website}
                 target="_blank"
                 rel="noreferrer"
@@ -109,12 +120,14 @@ export default function MarketplaceDetail() {
                 {item.website}
               </a>
             ) : (
-              <div className="text-muted-foreground">—</div>
+              <div className="text-slate-600">—</div>
             )}
           </div>
           <div>
-            <div className="text-muted-foreground">Owner</div>
-            <div>{item.owner?.displayName ?? item.owner?.email ?? "—"}</div>
+            <div className="text-slate-600">Owner</div>
+            <div className="text-slate-900">
+              {item.owner?.displayName ?? item.owner?.email ?? "—"}
+            </div>
           </div>
         </div>
       </div>

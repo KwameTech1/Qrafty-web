@@ -15,14 +15,14 @@ const Inventory = lazy(() => import("./pages/app/Inventory"));
 const Interactions = lazy(() => import("./pages/app/Interactions"));
 const Marketplace = lazy(() => import("./pages/app/Marketplace"));
 const MarketplaceDetail = lazy(() => import("./pages/app/MarketplaceDetail"));
+const BusinessProfile = lazy(() => import("./pages/app/BusinessProfile"));
+const Profile = lazy(() => import("./pages/app/Profile"));
 
 function RouteLoading() {
   return (
-    <main className="min-h-screen p-6">
-      <div className="mx-auto w-full max-w-md">
-        <p className="text-sm text-slate-600">Loading…</p>
-      </div>
-    </main>
+    <div className="flex min-h-[40vh] items-center justify-center">
+      <p className="text-sm text-slate-600">Loading…</p>
+    </div>
   );
 }
 
@@ -89,6 +89,22 @@ function App() {
             element={
               <Suspense fallback={<RouteLoading />}>
                 <MarketplaceDetail />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/app/business"
+            element={
+              <Suspense fallback={<RouteLoading />}>
+                <BusinessProfile />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/app/profile"
+            element={
+              <Suspense fallback={<RouteLoading />}>
+                <Profile />
               </Suspense>
             }
           />

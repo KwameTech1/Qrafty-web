@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mockup — QR Editor</title>
+    <link rel="stylesheet" href="./mockups.css" />
+  </head>
+  <body class="stage">
+    <div
+      class="mx-auto flex min-h-screen w-full max-w-[1100px] items-center px-6 py-10"
+    >
+      <div class="grid w-full grid-cols-1 items-center gap-10 md:grid-cols-2">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="brand-badge">Q</div>
+            <div class="text-sm font-semibold tracking-wide text-slate-900">
+              QRAFTY
+            </div>
+          </div>
+          <h1
+            class="mt-6 text-[34px] font-semibold leading-[1.1] tracking-tight text-slate-900"
+          >
+            QR Editor
+          </h1>
+          <p class="mt-3 max-w-[520px] text-[14px] leading-6 text-slate-600">
+            Preview the generated QR, confirm the public profile URL, then save.
+          </p>
+        </div>
+
+        <div class="flex justify-center md:justify-end">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="bg-white">
+                <div class="status">
+                  <span>9:41</span>
+                  <span class="flex items-center gap-2">
+                    <span class="tag">5G</span>
+                    <span class="tag">100%</span>
+                  </span>
+                </div>
+
+                <div class="px-5 pb-6">
+                  <div class="mt-3 flex items-center justify-between">
+                    <div class="text-[12px] font-semibold text-slate-900">
+                      QR Editor
+                    </div>
+                    <div class="tag">Draft</div>
+                  </div>
+
+                  <div class="mt-4 card p-4">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <div class="text-[12px] font-semibold text-slate-900">
+                          Generated QR
+                        </div>
+                        <div class="mt-1 text-[11px] text-slate-600">
+                          This QR opens your public profile.
+                        </div>
+                      </div>
+                      <div class="btn btn-ghost px-3 py-1">Download</div>
+                    </div>
+
+                    <div
+                      class="mt-4 grid place-items-center rounded-lg border border-slate-200 bg-slate-50 p-5"
+                    >
+                      <div
+                        class="h-44 w-44 rounded-md border border-slate-200 bg-white p-3"
+                      >
+                        <svg
+                          viewBox="0 0 100 100"
+                          class="h-full w-full"
+                          aria-label="QR placeholder"
+                        >
+                          <rect width="100" height="100" fill="white" />
+                          <g fill="#0f172a">
+                            <rect x="6" y="6" width="26" height="26" />
+                            <rect
+                              x="10"
+                              y="10"
+                              width="18"
+                              height="18"
+                              fill="white"
+                            />
+                            <rect x="14" y="14" width="10" height="10" />
+
+                            <rect x="68" y="6" width="26" height="26" />
+                            <rect
+                              x="72"
+                              y="10"
+                              width="18"
+                              height="18"
+                              fill="white"
+                            />
+                            <rect x="76" y="14" width="10" height="10" />
+
+                            <rect x="6" y="68" width="26" height="26" />
+                            <rect
+                              x="10"
+                              y="72"
+                              width="18"
+                              height="18"
+                              fill="white"
+                            />
+                            <rect x="14" y="76" width="10" height="10" />
+
+                            <rect x="42" y="42" width="8" height="8" />
+                            <rect x="54" y="42" width="8" height="8" />
+                            <rect x="42" y="54" width="8" height="8" />
+                            <rect x="54" y="54" width="8" height="8" />
+                            <rect x="34" y="34" width="6" height="6" />
+                            <rect x="60" y="34" width="6" height="6" />
+                            <rect x="34" y="60" width="6" height="6" />
+                            <rect x="60" y="60" width="6" height="6" />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="mt-4">
+                      <div class="text-[11px] font-medium text-slate-700">
+                        Public profile URL
+                      </div>
+                      <div
+                        class="mt-1 flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-white px-3 py-2"
+                      >
+                        <div class="text-[11px] text-slate-700">
+                          https://qrafty.app/p/qrafty-demo
+                        </div>
+                        <div class="tag">Copy</div>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 grid grid-cols-2 gap-2">
+                      <div class="btn btn-ghost py-3">Cancel</div>
+                      <div class="btn btn-primary py-3">Save</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 soft p-3">
+                    <div class="text-[11px] font-semibold text-slate-900">
+                      Tip
+                    </div>
+                    <div class="mt-1 text-[11px] leading-4 text-slate-600">
+                      Name your QR clearly so you can find it in Inventory
+                      later.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

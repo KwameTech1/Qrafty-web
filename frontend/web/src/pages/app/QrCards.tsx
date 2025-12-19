@@ -159,7 +159,7 @@ export default function QrCards() {
                 Label
               </label>
               <input
-                className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400"
+                className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-400"
                 value={label}
                 onChange={(e) => setLabel(e.target.value)}
                 maxLength={60}
@@ -167,7 +167,7 @@ export default function QrCards() {
               />
             </div>
             <button
-              className="w-full rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800 disabled:opacity-60"
+              className="w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"
               type="submit"
               disabled={creating}
             >
@@ -189,7 +189,7 @@ export default function QrCards() {
                     className={
                       "rounded-md border p-3 " +
                       (selectedId === card.id
-                        ? "border-slate-900"
+                        ? "border-blue-600"
                         : "border-slate-200")
                     }
                   >
@@ -255,7 +255,7 @@ export default function QrCards() {
                   </p>
                   <p className="mt-1 text-sm text-slate-600">Public link</p>
                   <a
-                    className="mt-1 block break-all text-sm text-slate-900 underline"
+                    className="mt-1 block break-all text-sm text-blue-700 underline hover:text-blue-800"
                     href={publicUrl ?? undefined}
                     target="_blank"
                     rel="noreferrer"

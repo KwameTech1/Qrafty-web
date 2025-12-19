@@ -71,7 +71,7 @@ export default function Inventory() {
         </div>
 
         <Link
-          className="rounded-md bg-slate-900 px-3 py-2 text-sm font-medium text-white hover:bg-slate-800"
+          className="rounded-md bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700"
           to="/app/qr"
         >
           Manage QR cards
@@ -120,7 +120,7 @@ export default function Inventory() {
           <div className="p-4">
             <p className="text-sm text-slate-600">No QR cards yet.</p>
             <Link
-              className="mt-2 inline-block text-sm text-slate-900 underline"
+              className="mt-2 inline-block text-sm text-blue-700 underline hover:text-blue-800"
               to="/app/qr"
             >
               Create your first QR card

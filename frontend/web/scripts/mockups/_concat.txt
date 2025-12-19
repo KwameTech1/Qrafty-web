@@ -1,0 +1,1405 @@
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000001.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000002.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000003.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000004.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000005.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000006.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000007.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000008.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000009.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000010.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000011.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000012.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000013.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000014.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000015.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000016.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000017.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000018.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000019.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000020.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000021.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000022.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000023.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000024.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000025.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000026.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000027.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000028.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000029.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000030.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000031.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000032.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000033.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000034.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000035.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000036.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000037.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000038.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000039.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000040.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000041.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000042.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000043.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000044.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000045.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000046.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000047.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000048.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000049.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000050.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000051.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000052.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000053.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000054.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000055.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000056.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000057.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000058.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000059.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000060.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000061.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000062.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000063.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000064.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000065.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000066.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000067.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000068.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000069.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000070.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000071.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000072.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000073.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000074.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000075.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000076.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000077.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000078.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000079.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000080.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000081.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000082.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000083.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000084.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000085.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000086.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000087.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000088.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000089.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000090.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000091.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000092.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000093.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000094.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000095.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000096.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000097.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000098.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000099.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000100.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000101.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000102.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000103.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000104.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000105.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000106.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000107.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000108.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000109.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000110.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000111.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000112.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000113.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000114.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000115.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000116.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000117.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000118.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000119.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000120.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000121.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000122.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000123.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000124.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000125.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000126.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000127.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000128.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000129.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000130.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000131.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000132.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000133.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000134.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000135.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000136.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000137.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000138.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000139.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000140.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000141.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000142.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000143.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000144.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000145.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000146.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000147.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000148.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000149.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000150.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000151.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000152.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000153.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000154.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000155.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000156.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000157.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000158.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000159.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000160.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000161.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000162.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000163.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000164.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000165.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000166.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000167.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000168.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000169.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000170.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000171.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000172.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000173.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000174.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000175.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000176.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000177.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000178.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000179.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000180.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000181.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000182.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000183.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000184.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000185.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000186.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000187.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000188.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000189.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000190.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000191.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000192.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000193.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000194.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000195.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000196.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000197.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000198.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000199.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000200.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000201.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000202.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000203.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000204.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000205.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000206.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000207.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000208.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000209.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000210.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000211.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000212.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000213.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000214.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000215.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000216.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000217.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000218.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000219.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000220.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000221.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000222.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000223.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000224.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000225.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000226.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000227.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000228.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000229.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000230.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000231.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000232.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000233.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000234.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000235.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000236.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000237.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000238.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000239.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000240.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000241.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000242.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000243.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000244.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000245.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000246.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000247.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000248.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000249.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000250.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000251.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000252.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000253.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000254.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000255.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000256.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000257.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000258.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000259.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000260.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000261.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000262.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000263.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000264.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000265.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000266.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000267.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000268.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000269.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000270.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000271.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000272.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000273.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000274.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000275.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000276.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000277.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000278.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000279.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000280.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000281.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000282.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000283.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000284.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000285.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000286.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000287.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000288.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000289.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000290.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000291.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000292.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000293.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000294.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000295.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000296.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000297.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000298.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000299.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000300.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000301.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000302.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000303.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000304.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000305.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000306.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000307.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000308.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000309.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000310.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000311.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000312.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000313.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000314.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000315.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000316.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000317.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000318.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000319.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000320.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000321.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000322.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000323.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000324.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000325.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000326.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000327.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000328.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000329.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000330.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000331.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000332.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000333.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000334.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000335.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000336.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000337.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000338.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000339.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000340.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000341.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000342.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000343.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000344.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000345.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000346.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000347.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000348.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000349.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000350.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000351.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000352.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000353.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000354.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000355.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000356.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000357.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000358.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000359.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000360.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000361.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000362.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000363.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000364.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000365.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000366.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000367.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000368.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000369.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000370.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000371.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000372.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000373.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000374.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000375.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000376.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000377.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000378.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000379.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000380.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000381.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000382.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000383.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000384.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000385.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000386.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000387.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000388.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000389.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000390.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000391.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000392.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000393.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000394.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000395.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000396.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000397.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000398.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000399.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000400.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000401.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000402.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000403.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000404.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000405.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000406.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000407.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000408.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000409.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000410.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000411.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000412.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000413.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000414.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000415.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000416.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000417.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000418.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000419.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000420.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000421.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000422.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000423.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000424.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000425.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000426.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000427.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000428.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000429.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000430.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000431.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000432.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000433.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000434.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000435.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000436.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000437.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000438.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000439.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000440.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000441.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000442.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000443.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000444.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000445.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000446.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000447.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000448.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000449.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000450.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000451.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000452.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000453.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000454.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000455.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000456.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000457.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000458.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000459.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000460.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000461.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000462.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000463.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000464.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000465.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000466.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000467.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000468.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000469.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000470.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000471.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000472.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000473.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000474.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000475.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000476.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000477.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000478.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000479.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000480.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000481.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000482.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000483.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000484.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000485.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000486.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000487.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000488.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000489.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000490.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000491.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000492.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000493.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000494.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000495.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000496.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000497.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000498.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000499.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000500.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000501.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000502.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000503.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000504.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000505.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000506.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000507.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000508.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000509.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000510.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000511.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000512.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000513.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000514.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000515.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000516.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000517.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000518.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000519.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000520.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000521.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000522.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000523.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000524.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000525.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000526.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000527.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000528.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000529.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000530.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000531.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000532.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000533.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000534.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000535.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000536.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000537.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000538.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000539.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000540.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000541.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000542.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000543.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000544.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000545.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000546.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000547.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000548.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000549.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000550.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000551.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000552.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000553.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000554.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000555.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000556.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000557.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000558.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000559.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000560.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000561.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000562.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000563.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000564.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000565.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000566.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000567.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000568.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000569.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000570.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000571.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000572.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000573.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000574.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000575.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000576.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000577.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000578.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000579.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000580.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000581.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000582.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000583.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000584.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000585.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000586.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000587.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000588.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000589.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000590.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000591.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000592.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000593.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000594.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000595.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000596.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000597.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000598.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000599.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000600.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000601.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000602.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000603.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000604.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000605.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000606.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000607.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000608.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000609.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000610.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000611.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000612.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000613.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000614.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000615.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000616.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000617.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000618.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000619.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000620.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000621.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000622.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000623.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000624.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000625.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000626.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000627.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000628.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000629.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000630.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000631.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000632.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000633.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000634.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000635.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000636.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000637.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000638.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000639.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000640.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000641.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000642.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000643.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000644.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000645.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000646.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000647.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000648.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000649.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000650.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000651.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000652.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000653.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000654.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000655.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000656.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000657.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000658.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000659.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000660.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000661.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000662.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000663.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000664.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000665.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000666.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000667.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000668.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000669.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000670.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000671.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000672.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000673.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000674.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000675.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000676.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000677.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000678.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000679.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000680.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000681.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000682.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000683.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000684.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000685.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000686.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000687.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000688.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000689.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000690.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000691.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000692.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000693.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000694.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000695.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000696.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000697.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000698.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000699.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000700.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000701.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000702.png'
+duration 0.041666666666666664
+file 'C:/Users/Edmond kwame Kumah/Documents/Qrafty-web/frontend/web/scripts/mockups/_frames/000702.png'

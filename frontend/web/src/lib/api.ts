@@ -1,4 +1,36 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+function isLoopbackHostname(hostname: string) {
+  const normalized = hostname.trim().toLowerCase();
+  return normalized === "localhost" || normalized === "127.0.0.1";
+}
+
+function resolveApiUrl() {
+  const configured = import.meta.env.VITE_API_URL;
+  if (configured) {
+    if (typeof window !== "undefined") {
+      try {
+        const cfg = new URL(configured);
+        const appHost = window.location.hostname;
+        if (isLoopbackHostname(cfg.hostname) && !isLoopbackHostname(appHost)) {
+          cfg.hostname = appHost;
+          return cfg.toString().replace(/\/$/, "");
+        }
+      } catch {
+        // ignore
+      }
+    }
+
+    return configured;
+  }
+
+  if (typeof window !== "undefined") {
+    const { protocol, hostname } = window.location;
+    return `${protocol}//${hostname}:4000`;
+  }
+
+  return "http://localhost:4000";
+}
+
+const API_URL = resolveApiUrl();
 
 if (import.meta.env.DEV) {
   console.debug(
