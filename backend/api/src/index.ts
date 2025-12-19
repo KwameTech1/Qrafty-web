@@ -1,4 +1,5 @@
 import path from "node:path";
+import fs from "node:fs";
 
 import dotenv from "dotenv";
 
@@ -21,19 +22,15 @@ import { publicRouter } from "./routes/public";
 import { qrCardsRouter } from "./routes/qrCards";
 
 const envPath = path.resolve(__dirname, "..", ".env");
-const dotenvResult = dotenv.config({ path: envPath });
+const hasDotEnv = fs.existsSync(envPath);
+const dotenvResult = hasDotEnv ? dotenv.config({ path: envPath }) : null;
 
 // eslint-disable-next-line no-console
 console.log(
-  `[env] loadedFrom=${envPath} ok=${!dotenvResult.error} keys=${
-    dotenvResult.parsed ? Object.keys(dotenvResult.parsed).length : 0
-  }`
+  `[env] loadedFrom=${envPath} exists=${hasDotEnv} ok=${
+    dotenvResult ? !dotenvResult.error : true
+  } keys=${dotenvResult?.parsed ? Object.keys(dotenvResult.parsed).length : 0}`
 );
-
-if (dotenvResult.error) {
-  // eslint-disable-next-line no-console
-  console.warn(`[env] dotenv error: ${dotenvResult.error.message}`);
-}
 
 const env = getEnv();
 
@@ -130,7 +127,7 @@ app.get("/health", (_req, res) => {
     ok: true,
     googleOAuthConfigured,
     envLoadedFrom: envPath,
-    envLoadedOk: !dotenvResult.error,
+    envLoadedOk: dotenvResult ? !dotenvResult.error : true,
     googleEnv: {
       hasClientId: Boolean(env.GOOGLE_CLIENT_ID),
       hasClientSecret: Boolean(env.GOOGLE_CLIENT_SECRET),
