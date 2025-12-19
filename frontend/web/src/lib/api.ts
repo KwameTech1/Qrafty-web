@@ -53,12 +53,17 @@ export async function apiFetch<T>(
   path: string,
   init?: RequestInit
 ): Promise<T> {
+  const headers = new Headers(init?.headers ?? undefined);
+
+  // Avoid forcing a CORS preflight on simple GETs.
+  // Only set JSON content-type when we're actually sending a body.
+  if (init?.body != null && !headers.has("content-type")) {
+    headers.set("content-type", "application/json");
+  }
+
   const res = await fetch(`${API_URL}${path}`, {
     ...init,
-    headers: {
-      "content-type": "application/json",
-      ...(init?.headers ?? {}),
-    },
+    headers,
     credentials: "include",
   });
 
