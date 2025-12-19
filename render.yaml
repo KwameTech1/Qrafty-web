@@ -4,7 +4,7 @@ services:
     env: node
     rootDir: backend/api
     plan: starter
-    buildCommand: npm ci && npm run prisma:generate && npm run build
+    buildCommand: npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build
     startCommand: npm run start
     healthCheckPath: /health
     envVars:
@@ -14,9 +14,11 @@ services:
         fromDatabase:
           name: qrafty-db
           property: connectionString
-      # Set these in Render dashboard (or add here if you prefer)
+      - key: JWT_SECRET
+        generateValue: true
+      # Set this in Render dashboard (or add here) to your deployed web app origin.
+      # Example: https://<your-frontend-domain>
       # - key: WEB_ORIGIN
-      # - key: JWT_SECRET
       # - key: GOOGLE_CLIENT_ID
       # - key: GOOGLE_CLIENT_SECRET
       # - key: GOOGLE_REDIRECT_URL
