@@ -63,7 +63,8 @@ function getSafeOrigin(value: string | null | undefined) {
 function getWebOriginFromRequest(req: Request, env: Env) {
   const fromReferer = getSafeOrigin(req.get("referer") ?? null);
   const fromOrigin = getSafeOrigin(req.get("origin") ?? null);
-  return fromReferer ?? fromOrigin ?? env.WEB_ORIGIN;
+  const fallback = getSafeOrigin(env.WEB_ORIGIN) ?? env.WEB_ORIGIN;
+  return fromReferer ?? fromOrigin ?? fallback;
 }
 
 function isLoopbackHostname(hostname: string) {
