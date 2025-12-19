@@ -10,6 +10,8 @@ export default function Signup() {
   const { refresh } = useAuth();
   const [searchParams] = useSearchParams();
 
+  const next = searchParams.get("next") || "/app";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ export default function Signup() {
         body: JSON.stringify({ email, password }),
       });
       await refresh();
-      navigate("/", { replace: true });
+      navigate(next, { replace: true });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Sign up failed");
     } finally {
@@ -56,11 +58,11 @@ export default function Signup() {
 
           <a
             className="mt-6 flex w-full items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 disabled:opacity-60"
-            href={`${getApiUrl()}/auth/google/start`}
+            href={`${getApiUrl()}/auth/google/start?next=${encodeURIComponent(next)}`}
             onClick={() => {
               if (import.meta.env.DEV) {
                 console.debug(
-                  `[auth] google start -> ${getApiUrl()}/auth/google/start`
+                  `[auth] google start -> ${getApiUrl()}/auth/google/start?next=${encodeURIComponent(next)}`
                 );
               }
             }}

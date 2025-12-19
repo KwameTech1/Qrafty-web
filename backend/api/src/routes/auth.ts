@@ -111,6 +111,16 @@ function resolveGoogleRedirectUrl(req: Request, env: Env, redirectUrl: string) {
   return redirectUrl;
 }
 
+function getSafeNextPath(value: unknown) {
+  if (typeof value !== "string") return null;
+  const trimmed = value.trim();
+  if (!trimmed.startsWith("/")) return null;
+  if (trimmed.startsWith("//")) return null;
+  // Prevent CRLF/header injection and keep this simple.
+  if (/[\r\n]/.test(trimmed)) return null;
+  return trimmed;
+}
+
 export function authRouter(env: Env) {
   const router = Router();
 
@@ -217,6 +227,7 @@ export function authRouter(env: Env) {
 
     const webOrigin = getWebOriginFromRequest(req, env);
     const redirectUrl = resolveGoogleRedirectUrl(req, env, google.redirectUrl);
+    const nextPath = getSafeNextPath(req.query.next) ?? "/app";
 
     if (env.NODE_ENV !== "production") {
       // eslint-disable-next-line no-console
@@ -243,6 +254,14 @@ export function authRouter(env: Env) {
     });
 
     res.cookie("qrafty_oauth_redirect_url", redirectUrl, {
+      httpOnly: true,
+      secure: env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 1000 * 60 * 10,
+    });
+
+    res.cookie("qrafty_oauth_next", nextPath, {
       httpOnly: true,
       secure: env.NODE_ENV === "production",
       sameSite: "lax",
@@ -279,6 +298,9 @@ export function authRouter(env: Env) {
         ? req.cookies.qrafty_oauth_redirect_url
         : null;
 
+    const nextPath =
+      getSafeNextPath(req.cookies?.qrafty_oauth_next ?? null) ?? "/app";
+
     const redirectUrl = cookieRedirectUrlRaw
       ? resolveGoogleRedirectUrl(req, env, cookieRedirectUrlRaw)
       : resolveGoogleRedirectUrl(req, env, google.redirectUrl);
@@ -300,6 +322,7 @@ export function authRouter(env: Env) {
     res.clearCookie("qrafty_oauth_state", oauthCookieOptions);
     res.clearCookie("qrafty_oauth_origin", oauthCookieOptions);
     res.clearCookie("qrafty_oauth_redirect_url", oauthCookieOptions);
+    res.clearCookie("qrafty_oauth_next", oauthCookieOptions);
 
     try {
       const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
@@ -390,7 +413,7 @@ export function authRouter(env: Env) {
       const token = signAuthToken(env, { sub: user.id });
       res.cookie(getAuthCookieName(), token, buildAuthCookieOptions(env));
 
-      return res.redirect(`${webOrigin}/`);
+      return res.redirect(`${webOrigin}${nextPath}`);
     } catch {
       return res.redirect(`${webOrigin}/login?error=google_unknown`);
     }

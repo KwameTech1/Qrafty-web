@@ -22,6 +22,13 @@ function resolveApiUrl() {
     return configured;
   }
 
+  // In production the frontend and API are usually on different origins.
+  // If VITE_API_URL isn't set, default to the deployed API to avoid silently
+  // calling a non-existent ":4000" on the Vercel domain.
+  if (import.meta.env.PROD) {
+    return "https://qrafty-api.onrender.com";
+  }
+
   if (typeof window !== "undefined") {
     const { protocol, hostname } = window.location;
     return `${protocol}//${hostname}:4000`;
