@@ -15,6 +15,7 @@ import {
   buildAuthCookieOptions,
   getAuthCookieName,
   signAuthToken,
+  verifyAuthToken,
 } from "../auth/jwt";
 import { hashPassword, verifyPassword } from "../auth/password";
 
@@ -194,6 +195,20 @@ export function authRouter(env: Env) {
   });
 
   router.get("/me", async (req: Request, res: Response) => {
+    // Diagnostic headers to debug auth issues in production without leaking tokens.
+    // Helpful when requests are proxied (e.g., via Vercel /api) and cookies may be
+    // blocked or not forwarded.
+    const cookieToken = req.cookies?.[getAuthCookieName()];
+    res.setHeader("x-qrafty-auth-cookie-present", cookieToken ? "1" : "0");
+    if (cookieToken) {
+      try {
+        verifyAuthToken(env, cookieToken);
+        res.setHeader("x-qrafty-auth-cookie-valid", "1");
+      } catch {
+        res.setHeader("x-qrafty-auth-cookie-valid", "0");
+      }
+    }
+
     const userId = getOptionalUserId(env, req);
     if (!userId) {
       return res.json({ user: null });
