@@ -13,10 +13,10 @@ const mockupsDir = path.join(__dirname, "mockups");
 const cssIn = path.join(mockupsDir, "_base.css");
 const cssOut = path.join(mockupsDir, "mockups.css");
 const framesDir = path.join(mockupsDir, "_frames");
-const concatFile = path.join(mockupsDir, "_concat.txt");
 const outVideo = path.join(webRoot, "public", "videos", "walkthrough.mp4");
 
 const FPS = 24;
+const CROSSFADE_FRAMES = 8;
 
 const orderedScreens = [
   { file: "landing-hero.html", seconds: 2.6 },
@@ -34,6 +34,14 @@ const orderedScreens = [
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
+}
+
+function safeUnlink(filePath) {
+  try {
+    fs.unlinkSync(filePath);
+  } catch {
+    // ignore
+  }
 }
 
 function clamp(value, min, max) {
@@ -61,49 +69,15 @@ function findFfmpeg() {
   if (fromEnv && fs.existsSync(fromEnv)) return fromEnv;
 
   try {
-    // Provides a platform-specific ffmpeg binary (e.g. ffmpeg.exe on Windows)
-    // and avoids relying on PATH (which differs between Git Bash/cmd/PowerShell).
+    // Bundled ffmpeg avoids PATH differences between Git Bash/cmd/PowerShell.
     const installer = require("@ffmpeg-installer/ffmpeg");
-    if (installer?.path && fs.existsSync(installer.path)) {
-      return installer.path;
-    }
+    if (installer?.path && fs.existsSync(installer.path)) return installer.path;
   } catch {
     // ignore
   }
 
   const fromPath = tryWhich("ffmpeg.exe") || tryWhich("ffmpeg");
   if (fromPath) return fromPath;
-
-  const localAppData = process.env.LOCALAPPDATA;
-  if (localAppData) {
-    const candidate = path.join(
-      localAppData,
-      "Microsoft",
-      "WinGet",
-      "Packages"
-    );
-
-    if (fs.existsSync(candidate)) {
-      const stack = [candidate];
-      while (stack.length) {
-        const current = stack.pop();
-        if (!current) continue;
-        const entries = fs.readdirSync(current, { withFileTypes: true });
-        for (const entry of entries) {
-          const full = path.join(current, entry.name);
-          if (entry.isDirectory()) {
-            if (entry.name.toLowerCase().includes("node_modules")) continue;
-            stack.push(full);
-          } else if (
-            entry.isFile() &&
-            entry.name.toLowerCase() === "ffmpeg.exe"
-          ) {
-            return full;
-          }
-        }
-      }
-    }
-  }
 
   return null;
 }
@@ -119,33 +93,40 @@ function buildMockupsCss() {
     "index.mjs"
   );
 
-  const args = [tailwindEntry, "-i", "_base.css", "-o", "mockups.css"];
+  const res = spawnSync(
+    process.execPath,
+    [tailwindEntry, "-i", "_base.css", "-o", "mockups.css"],
+    {
+      cwd: mockupsDir,
+      stdio: "inherit",
+    }
+  );
 
-  const res = spawnSync(process.execPath, args, {
-    cwd: mockupsDir,
-    stdio: "inherit",
-  });
-
-  if (res.error) {
-    throw res.error;
-  }
-
-  if (res.status !== 0) {
-    throw new Error("Tailwind build failed");
-  }
+  if (res.error) throw res.error;
+  if (res.status !== 0) throw new Error("Tailwind build failed");
 }
 
 async function renderFrames() {
   ensureDir(framesDir);
 
-  // Clean old frames to avoid mixing with new runs.
+  // Clean old frames.
   if (fs.existsSync(framesDir)) {
     for (const entry of fs.readdirSync(framesDir)) {
       const full = path.join(framesDir, entry);
       if (fs.statSync(full).isFile() && entry.toLowerCase().endsWith(".png")) {
-        fs.unlinkSync(full);
+        safeUnlink(full);
       }
     }
+  }
+
+  const xfadeTmpDir = path.join(mockupsDir, "_xfade_tmp");
+  ensureDir(xfadeTmpDir);
+
+  const ffmpeg = findFfmpeg();
+  if (!ffmpeg) {
+    throw new Error(
+      "ffmpeg not found. Install it (winget install --id Gyan.FFmpeg -e) or ensure it's on PATH."
+    );
   }
 
   const browser = await chromium.launch();
@@ -153,8 +134,7 @@ async function renderFrames() {
     viewport: { width: 1280, height: 720 },
   });
 
-  // IMPORTANT: page.goto() replaces the whole document, so inject cursor
-  // setup as an init script that runs for every navigation.
+  // Cursor overlay must be re-injected for every navigation.
   await page.addInitScript({
     content: `
       (function () {
@@ -163,7 +143,7 @@ async function renderFrames() {
 
           const style = document.createElement('style');
           style.id = 'mock-cursor-style';
-          style.textContent = \
+          style.textContent =
             "#mock-cursor{position:fixed;left:0;top:0;width:14px;height:14px;border-radius:9999px;border:2px solid rgba(37,99,235,.95);background:rgba(255,255,255,.95);box-shadow:0 8px 20px rgba(15,23,42,.25);transform:translate(-50%,-50%);z-index:2147483647;pointer-events:none}" +
             "#mock-cursor-ring{position:fixed;left:0;top:0;width:42px;height:42px;border-radius:9999px;border:2px solid rgba(37,99,235,.4);transform:translate(-50%,-50%) scale(.2);opacity:0;z-index:2147483646;pointer-events:none}" +
             "@keyframes mock-click{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}10%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(1.1)}}" +
@@ -203,9 +183,50 @@ async function renderFrames() {
     `,
   });
 
-  /** @type {{ path: string; duration: number }[]} */
-  const frames = [];
   let globalIndex = 1;
+  let previousLastFrame = null;
+
+  function writeCrossfade(fromPng, toPng) {
+    for (let k = 1; k <= CROSSFADE_FRAMES; k += 1) {
+      const alpha = k / (CROSSFADE_FRAMES + 1);
+      const tmpOut = path.join(
+        xfadeTmpDir,
+        `xfade-${String(k).padStart(3, "0")}.png`
+      );
+      safeUnlink(tmpOut);
+
+      const res = spawnSync(
+        ffmpeg,
+        [
+          "-y",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-i",
+          fromPng,
+          "-i",
+          toPng,
+          "-filter_complex",
+          `[0:v][1:v]blend=all_expr=A*(1-${alpha})+B*${alpha},format=rgb24`,
+          "-frames:v",
+          "1",
+          tmpOut,
+        ],
+        { encoding: "utf8" }
+      );
+
+      if (res.status !== 0) {
+        throw new Error(res.stderr || "ffmpeg crossfade failed");
+      }
+
+      const dest = path.join(
+        framesDir,
+        `${String(globalIndex).padStart(6, "0")}.png`
+      );
+      globalIndex += 1;
+      fs.renameSync(tmpOut, dest);
+    }
+  }
 
   for (let i = 0; i < orderedScreens.length; i += 1) {
     const screen = orderedScreens[i];
@@ -213,11 +234,8 @@ async function renderFrames() {
     const fileUrl = url.pathToFileURL(htmlPath).toString();
 
     await page.goto(fileUrl, { waitUntil: "networkidle" });
-
-    // Ensure cursor overlay exists for this document.
     await page.evaluate(() => window.__ensureMockCursor?.());
 
-    // Find a reasonable hover/click target on the screen.
     const target = await page.evaluate(() => {
       const selectors = [
         ".btn-primary",
@@ -257,7 +275,6 @@ async function renderFrames() {
       40,
       viewport.height - 40
     );
-
     const startX = clamp(targetX - 220, 40, viewport.width - 40);
     const startY = clamp(targetY - 140, 40, viewport.height - 40);
 
@@ -267,21 +284,41 @@ async function renderFrames() {
       Math.min(screenFrames - 1, Math.floor(screenFrames * 0.68))
     );
 
-    for (let f = 0; f < screenFrames; f += 1) {
-      const t = screenFrames === 1 ? 1 : easeInOutCubic(f / (screenFrames - 1));
+    // First frame rendered to temp so we can insert a crossfade BEFORE it.
+    const firstTemp = path.join(xfadeTmpDir, "__first.png");
+    safeUnlink(firstTemp);
+
+    await page.mouse.move(startX, startY);
+    await page.evaluate(
+      ({ x: xPos, y: yPos }) => window.__setMockCursor?.(xPos, yPos),
+      { x: startX, y: startY }
+    );
+    await page.waitForTimeout(20);
+    await page.screenshot({ path: firstTemp });
+
+    if (previousLastFrame) {
+      writeCrossfade(previousLastFrame, firstTemp);
+    }
+
+    const firstOut = path.join(
+      framesDir,
+      `${String(globalIndex).padStart(6, "0")}.png`
+    );
+    globalIndex += 1;
+    fs.renameSync(firstTemp, firstOut);
+
+    let lastOutPath = firstOut;
+
+    for (let f = 1; f < screenFrames; f += 1) {
+      const t = easeInOutCubic(f / (screenFrames - 1));
       const x = startX + (targetX - startX) * t;
       const y = startY + (targetY - startY) * t;
 
       await page.mouse.move(x, y);
       await page.evaluate(
-        ({ x: xPos, y: yPos }) => {
-          window.__setMockCursor?.(xPos, yPos);
-        },
+        ({ x: xPos, y: yPos }) => window.__setMockCursor?.(xPos, yPos),
         { x, y }
       );
-
-      // Give the browser a beat to paint the overlay before capturing.
-      await page.waitForTimeout(10);
 
       if (f === clickFrame) {
         await page.mouse.down();
@@ -289,32 +326,21 @@ async function renderFrames() {
         await page.evaluate(() => window.__mockClick?.());
       }
 
-      const filename = `${String(globalIndex).padStart(6, "0")}.png`;
+      await page.waitForTimeout(10);
+
+      const outPath = path.join(
+        framesDir,
+        `${String(globalIndex).padStart(6, "0")}.png`
+      );
       globalIndex += 1;
-      const outPath = path.join(framesDir, filename);
       await page.screenshot({ path: outPath });
-      frames.push({ path: outPath, duration: 1 / FPS });
+      lastOutPath = outPath;
     }
+
+    previousLastFrame = lastOutPath;
   }
 
   await browser.close();
-
-  return frames;
-}
-
-function buildConcatFile(frames) {
-  const lines = [];
-
-  for (const frame of frames) {
-    lines.push(`file '${frame.path.replace(/\\/g, "/")}'`);
-    lines.push(`duration ${frame.duration}`);
-  }
-
-  // concat demuxer needs the last file repeated without duration
-  const last = frames[frames.length - 1];
-  lines.push(`file '${last.path.replace(/\\/g, "/")}'`);
-
-  fs.writeFileSync(concatFile, lines.join("\n"), "utf8");
 }
 
 function stitchVideo() {
@@ -327,6 +353,8 @@ function stitchVideo() {
 
   ensureDir(path.dirname(outVideo));
 
+  const inputPattern = `${framesDir.replace(/\\/g, "/")}/%06d.png`;
+
   const res = spawnSync(
     ffmpeg,
     [
@@ -334,16 +362,14 @@ function stitchVideo() {
       "-hide_banner",
       "-loglevel",
       "error",
-      "-f",
-      "concat",
-      "-safe",
-      "0",
+      "-framerate",
+      String(FPS),
+      "-start_number",
+      "1",
       "-i",
-      concatFile,
-      "-vsync",
-      "vfr",
+      inputPattern,
       "-r",
-      "30",
+      String(FPS),
       "-pix_fmt",
       "yuv420p",
       "-movflags",
@@ -364,8 +390,7 @@ function stitchVideo() {
 
 async function main() {
   buildMockupsCss();
-  const frames = await renderFrames();
-  buildConcatFile(frames);
+  await renderFrames();
   stitchVideo();
 
   const stat = fs.statSync(outVideo);

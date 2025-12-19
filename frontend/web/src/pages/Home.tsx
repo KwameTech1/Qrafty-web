@@ -177,14 +177,18 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-linear-to-b from-white to-blue-50">
       <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-300 bg-white text-sm font-semibold text-slate-900">
+          <Link
+            to="/"
+            aria-label="QRAFTY home"
+            className="group inline-flex items-center gap-3 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+          >
+            <div className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-300 bg-white text-sm font-semibold text-slate-900 group-hover:bg-slate-50">
               Q
             </div>
             <p className="text-sm font-semibold tracking-wide text-slate-900">
               QRAFTY
             </p>
-          </div>
+          </Link>
 
           {user ? (
             <Link
@@ -195,7 +199,7 @@ export default function Home() {
             </Link>
           ) : (
             <Link
-              className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               to="/signup"
             >
               Get Started
@@ -307,50 +311,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="mt-10">
             <div className="rounded-xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold tracking-tight text-slate-900">
-                How it works
-              </h3>
-              <p className="mt-1 text-sm text-slate-600">
-                Go from setup to results in minutes.
-              </p>
-              <div className="mt-5 grid gap-3">
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
-                  <p className="text-sm font-semibold text-slate-900">
-                    1) Create your profile
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    Add your details once and publish a public QR page.
-                  </p>
-                </div>
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
-                  <p className="text-sm font-semibold text-slate-900">
-                    2) Generate your QR card
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    Create QR cards for events, products, or your storefront.
-                  </p>
-                </div>
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
-                  <p className="text-sm font-semibold text-slate-900">
-                    3) Track engagement
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    See scans and contact taps in your dashboard.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold tracking-tight text-slate-900">
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
                 Benefits
-              </h3>
+              </h2>
               <p className="mt-1 text-sm text-slate-600">
                 Built to feel simple, look sharp, and convert.
               </p>
-              <div className="mt-5 grid gap-3">
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
                   <p className="text-sm font-semibold text-slate-900">
                     One link for everything
@@ -385,6 +354,48 @@ export default function Home() {
             <div className="flex items-end justify-between gap-4">
               <div>
                 <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
+                  How it works
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm text-slate-600">
+                  Go from setup to results in minutes.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
+                <p className="text-sm font-semibold text-slate-900">
+                  1) Create your profile
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  Add your details once and publish a public QR page.
+                </p>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
+                <p className="text-sm font-semibold text-slate-900">
+                  2) Generate your QR card
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  Create QR cards for events, products, or your storefront.
+                </p>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 sm:p-4">
+                <p className="text-sm font-semibold text-slate-900">
+                  3) Track engagement
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  See scans and contact taps in your dashboard.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <div className="rounded-xl border border-slate-200 bg-white p-6">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
                   Video walkthrough
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-slate-600">
@@ -405,6 +416,130 @@ export default function Home() {
                   <source src="/videos/walkthrough.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <div className="rounded-xl border border-slate-200 bg-white p-6">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
+                  FAQ
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm text-slate-600">
+                  Quick answers to common questions about QR profiles and
+                  tracking.
+                </p>
+              </div>
+              <Link
+                className="hidden rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 sm:inline-flex"
+                to="/signup"
+              >
+                Get started
+              </Link>
+            </div>
+
+            <div className="mt-6 divide-y divide-slate-200 rounded-lg border border-slate-200 bg-white">
+              <details className="group p-4">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
+                  Do I need an app to use QRAFTY?
+                </summary>
+                <p className="mt-2 text-sm text-slate-600">
+                  No. Public QR profiles open in any modern phone browser.
+                </p>
+              </details>
+
+              <details className="group p-4">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
+                  Can I track scans and interactions?
+                </summary>
+                <p className="mt-2 text-sm text-slate-600">
+                  Yes. Your dashboard helps you see engagement like scans and
+                  contact actions in one place.
+                </p>
+              </details>
+
+              <details className="group p-4">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
+                  Can I update my profile without reprinting QR codes?
+                </summary>
+                <p className="mt-2 text-sm text-slate-600">
+                  If your QR points to your QRAFTY profile URL, updates to your
+                  profile show up when people scan it.
+                </p>
+              </details>
+
+              <details className="group p-4">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
+                  How many QR cards can I create?
+                </summary>
+                <p className="mt-2 text-sm text-slate-600">
+                  Create multiple QR cards for different campaigns, products, or
+                  locations, and manage them from your dashboard.
+                </p>
+              </details>
+
+              <details className="group p-4">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
+                  Can I share a public profile link directly?
+                </summary>
+                <p className="mt-2 text-sm text-slate-600">
+                  Yes. You can share your public profile URL anywhere, and it
+                  works the same as scanning the QR.
+                </p>
+              </details>
+            </div>
+
+            <div className="mt-6 sm:hidden">
+              <Link
+                className="inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                to="/signup"
+              >
+                Get started
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <div className="rounded-xl border border-slate-200 bg-white p-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
+                  Ready to launch your QR profile?
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm text-slate-600">
+                  Create your profile, generate a QR card, and start tracking
+                  engagement in minutes.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                {user ? (
+                  <Link
+                    className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    to="/app"
+                  >
+                    Go to dashboard
+                  </Link>
+                ) : (
+                  <>
+                    <Link
+                      className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      to="/signup"
+                    >
+                      Get Started
+                    </Link>
+                    <Link
+                      className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      to="/login"
+                    >
+                      Login
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>
