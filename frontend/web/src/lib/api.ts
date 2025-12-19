@@ -19,7 +19,7 @@ function resolveApiUrl() {
       }
     }
 
-    return configured;
+    return configured.replace(/\/$/, "");
   }
 
   // In production the frontend and API are usually on different origins.
