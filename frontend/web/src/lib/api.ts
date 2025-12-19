@@ -22,11 +22,10 @@ function resolveApiUrl() {
     return configured.replace(/\/$/, "");
   }
 
-  // In production the frontend and API are usually on different origins.
-  // If VITE_API_URL isn't set, default to the deployed API to avoid silently
-  // calling a non-existent ":4000" on the Vercel domain.
+  // In production we proxy API requests through the same origin (Vercel) to
+  // keep auth cookies first-party and avoid third-party cookie blocking.
   if (import.meta.env.PROD) {
-    return "https://qrafty-api.onrender.com";
+    return "/api";
   }
 
   if (typeof window !== "undefined") {
