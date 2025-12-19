@@ -50,6 +50,67 @@ function ensureGoogleEnv(env: Env) {
   };
 }
 
+function getSafeOrigin(value: string | null | undefined) {
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    return url.origin;
+  } catch {
+    return null;
+  }
+}
+
+function getWebOriginFromRequest(req: Request, env: Env) {
+  const fromReferer = getSafeOrigin(req.get("referer") ?? null);
+  const fromOrigin = getSafeOrigin(req.get("origin") ?? null);
+  return fromReferer ?? fromOrigin ?? env.WEB_ORIGIN;
+}
+
+function isLoopbackHostname(hostname: string) {
+  const normalized = hostname.trim().toLowerCase();
+  return normalized === "localhost" || normalized === "127.0.0.1";
+}
+
+function getRequestOrigin(req: Request) {
+  const forwardedProto = (req.get("x-forwarded-proto") ?? "")
+    .split(",")[0]
+    ?.trim();
+  const forwardedHost = (req.get("x-forwarded-host") ?? "")
+    .split(",")[0]
+    ?.trim();
+  const proto = forwardedProto || req.protocol;
+  const host = forwardedHost || (req.get("host") ?? "");
+  try {
+    return new URL(`${proto}://${host}`).origin;
+  } catch {
+    return null;
+  }
+}
+
+function resolveGoogleRedirectUrl(req: Request, env: Env, redirectUrl: string) {
+  if (env.NODE_ENV === "production") return redirectUrl;
+
+  try {
+    const url = new URL(redirectUrl);
+    const requestOrigin = getRequestOrigin(req);
+    if (!requestOrigin) return redirectUrl;
+
+    const reqUrl = new URL(requestOrigin);
+    if (
+      isLoopbackHostname(url.hostname) &&
+      !isLoopbackHostname(reqUrl.hostname)
+    ) {
+      url.protocol = reqUrl.protocol;
+      url.host = reqUrl.host;
+      return url.toString().replace(/\/$/, "");
+    }
+  } catch {
+    // ignore
+  }
+
+  return redirectUrl;
+}
+
 export function authRouter(env: Env) {
   const router = Router();
 
@@ -153,6 +214,16 @@ export function authRouter(env: Env) {
       );
     }
 
+    const webOrigin = getWebOriginFromRequest(req, env);
+    const redirectUrl = resolveGoogleRedirectUrl(req, env, google.redirectUrl);
+
+    if (env.NODE_ENV !== "production") {
+      // eslint-disable-next-line no-console
+      console.log(
+        `[oauth] /auth/google/start webOrigin=${webOrigin} redirect_uri=${redirectUrl}`
+      );
+    }
+
     const state = crypto.randomBytes(32).toString("base64url");
     res.cookie("qrafty_oauth_state", state, {
       httpOnly: true,
@@ -162,9 +233,25 @@ export function authRouter(env: Env) {
       maxAge: 1000 * 60 * 10,
     });
 
+    res.cookie("qrafty_oauth_origin", webOrigin, {
+      httpOnly: true,
+      secure: env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 1000 * 60 * 10,
+    });
+
+    res.cookie("qrafty_oauth_redirect_url", redirectUrl, {
+      httpOnly: true,
+      secure: env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 1000 * 60 * 10,
+    });
+
     const params = new URLSearchParams({
       client_id: google.clientId,
-      redirect_uri: google.redirectUrl,
+      redirect_uri: redirectUrl,
       response_type: "code",
       scope: "openid email profile",
       state,
@@ -183,17 +270,29 @@ export function authRouter(env: Env) {
       );
     }
 
+    const oauthOrigin = getSafeOrigin(req.cookies?.qrafty_oauth_origin ?? null);
+    const webOrigin = oauthOrigin ?? env.WEB_ORIGIN;
+
+    const cookieRedirectUrlRaw =
+      typeof req.cookies?.qrafty_oauth_redirect_url === "string"
+        ? req.cookies.qrafty_oauth_redirect_url
+        : null;
+
+    const redirectUrl = cookieRedirectUrlRaw
+      ? resolveGoogleRedirectUrl(req, env, cookieRedirectUrlRaw)
+      : resolveGoogleRedirectUrl(req, env, google.redirectUrl);
+
     const code = typeof req.query.code === "string" ? req.query.code : null;
     const state = typeof req.query.state === "string" ? req.query.state : null;
     const expectedState = req.cookies?.qrafty_oauth_state ?? null;
 
     if (!code || !state || !expectedState || state !== expectedState) {
-      return res.redirect(
-        `${env.WEB_ORIGIN}/login?error=google_state_mismatch`
-      );
+      return res.redirect(`${webOrigin}/login?error=google_state_mismatch`);
     }
 
     res.clearCookie("qrafty_oauth_state", { path: "/" });
+    res.clearCookie("qrafty_oauth_origin", { path: "/" });
+    res.clearCookie("qrafty_oauth_redirect_url", { path: "/" });
 
     try {
       const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
@@ -203,14 +302,14 @@ export function authRouter(env: Env) {
           code,
           client_id: google.clientId,
           client_secret: google.clientSecret,
-          redirect_uri: google.redirectUrl,
+          redirect_uri: redirectUrl,
           grant_type: "authorization_code",
         }),
       });
 
       if (!tokenResponse.ok) {
         return res.redirect(
-          `${env.WEB_ORIGIN}/login?error=google_token_exchange_failed`
+          `${webOrigin}/login?error=google_token_exchange_failed`
         );
       }
 
@@ -221,7 +320,7 @@ export function authRouter(env: Env) {
 
       if (!tokens.access_token) {
         return res.redirect(
-          `${env.WEB_ORIGIN}/login?error=google_missing_access_token`
+          `${webOrigin}/login?error=google_missing_access_token`
         );
       }
 
@@ -233,9 +332,7 @@ export function authRouter(env: Env) {
       );
 
       if (!userinfoResponse.ok) {
-        return res.redirect(
-          `${env.WEB_ORIGIN}/login?error=google_userinfo_failed`
-        );
+        return res.redirect(`${webOrigin}/login?error=google_userinfo_failed`);
       }
 
       const profile = (await userinfoResponse.json()) as {
@@ -247,7 +344,7 @@ export function authRouter(env: Env) {
 
       if (!profile.sub || !profile.email) {
         return res.redirect(
-          `${env.WEB_ORIGIN}/login?error=google_profile_incomplete`
+          `${webOrigin}/login?error=google_profile_incomplete`
         );
       }
 
@@ -286,9 +383,9 @@ export function authRouter(env: Env) {
       const token = signAuthToken(env, { sub: user.id });
       res.cookie(getAuthCookieName(), token, buildAuthCookieOptions(env));
 
-      return res.redirect(`${env.WEB_ORIGIN}/`);
+      return res.redirect(`${webOrigin}/`);
     } catch {
-      return res.redirect(`${env.WEB_ORIGIN}/login?error=google_unknown`);
+      return res.redirect(`${webOrigin}/login?error=google_unknown`);
     }
   });
 

@@ -10,12 +10,14 @@ const envSchema = z.object({
   NODE_ENV: z
     .enum(["development", "test", "production"])
     .default("development"),
+  HOST: z.string().optional().default("0.0.0.0"),
   PORT: z
     .string()
     .optional()
     .transform((value) => (value ? Number(value) : 4000))
     .pipe(z.number().int().min(1).max(65535)),
   WEB_ORIGIN: z.string().url().default("http://localhost:5173"),
+  WEB_ORIGINS: optionalNonEmptyString,
   DATABASE_URL: z.string().min(1),
   JWT_SECRET: z.string().min(32),
 
