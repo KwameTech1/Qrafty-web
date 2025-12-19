@@ -394,9 +394,7 @@ async function main() {
   stitchVideo();
 
   const stat = fs.statSync(outVideo);
-  // eslint-disable-next-line no-console
   console.log(`Generated: ${outVideo}`);
-  // eslint-disable-next-line no-console
   console.log(`Size: ${stat.size} bytes`);
 }
 

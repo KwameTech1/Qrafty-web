@@ -15,6 +15,10 @@ services:
         fromDatabase:
           name: qrafty-db
           property: connectionString
+      - key: SHADOW_DATABASE_URL
+        fromDatabase:
+          name: qrafty-db
+          property: connectionString
       - key: JWT_SECRET
         generateValue: true
       # Set this in Render dashboard (or add here) to your deployed web app origin.
