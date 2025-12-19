@@ -32,7 +32,9 @@ export function buildAuthCookieOptions(env: Env) {
   return {
     httpOnly: true,
     secure: env.NODE_ENV === "production",
-    sameSite: "lax" as const,
+    sameSite: (env.NODE_ENV === "production" ? "none" : "lax") as
+      | "none"
+      | "lax",
     path: "/",
     maxAge: 1000 * 60 * 60 * 24 * 7,
   };

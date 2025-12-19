@@ -201,7 +201,8 @@ export function authRouter(env: Env) {
   });
 
   router.post("/logout", (_req, res) => {
-    res.clearCookie(getAuthCookieName(), { path: "/" });
+    const { maxAge: _maxAge, ...cookieOptions } = buildAuthCookieOptions(env);
+    res.clearCookie(getAuthCookieName(), cookieOptions);
     return res.status(204).send();
   });
 
@@ -290,9 +291,15 @@ export function authRouter(env: Env) {
       return res.redirect(`${webOrigin}/login?error=google_state_mismatch`);
     }
 
-    res.clearCookie("qrafty_oauth_state", { path: "/" });
-    res.clearCookie("qrafty_oauth_origin", { path: "/" });
-    res.clearCookie("qrafty_oauth_redirect_url", { path: "/" });
+    const oauthCookieOptions = {
+      path: "/",
+      secure: env.NODE_ENV === "production",
+      sameSite: "lax" as const,
+    };
+
+    res.clearCookie("qrafty_oauth_state", oauthCookieOptions);
+    res.clearCookie("qrafty_oauth_origin", oauthCookieOptions);
+    res.clearCookie("qrafty_oauth_redirect_url", oauthCookieOptions);
 
     try {
       const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
