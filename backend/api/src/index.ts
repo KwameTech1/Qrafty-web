@@ -99,6 +99,11 @@ function buildCorsOriginChecker() {
 
 const app = express();
 
+// Auth endpoints (e.g., /auth/me) must never be cached.
+// Disable ETag generation to avoid 304 Not Modified responses that can keep
+// the frontend in a stale "logged out" state.
+app.set("etag", false);
+
 app.set("trust proxy", 1);
 
 app.use(helmet());

@@ -195,6 +195,11 @@ export function authRouter(env: Env) {
   });
 
   router.get("/me", async (req: Request, res: Response) => {
+    // Never cache auth state.
+    res.setHeader("cache-control", "no-store");
+    res.setHeader("pragma", "no-cache");
+    res.setHeader("expires", "0");
+
     // Diagnostic headers to debug auth issues in production without leaking tokens.
     // Helpful when requests are proxied (e.g., via Vercel /api) and cookies may be
     // blocked or not forwarded.
