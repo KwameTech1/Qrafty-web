@@ -88,8 +88,18 @@ export async function apiFetch<T>(
     credentials: "include",
   });
 
+  const contentType = res.headers.get("content-type") ?? "";
   const text = await res.text();
-  const data = text ? (JSON.parse(text) as unknown) : null;
+  const isJson = contentType.toLowerCase().includes("application/json");
+  const data = text && isJson ? (JSON.parse(text) as unknown) : null;
+
+  if (text && !isJson) {
+    const snippet = text.slice(0, 140).replace(/\s+/g, " ").trim();
+    throw new Error(
+      `Expected JSON from ${path} but got ${contentType || "unknown"} (${res.status}). ` +
+        `Response starts with: ${snippet}`
+    );
+  }
 
   if (!res.ok) {
     const message =
