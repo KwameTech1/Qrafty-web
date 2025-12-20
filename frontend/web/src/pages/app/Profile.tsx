@@ -1,6 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react";
 
-import { useAuth } from "../../auth/AuthContext";
 import { apiFetch } from "../../lib/api";
 
 type Profile = {
@@ -33,8 +32,6 @@ function toNullIfBlank(value: string): string | null {
 }
 
 export default function ProfilePage() {
-  const { refresh } = useAuth();
-
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -93,7 +90,6 @@ export default function ProfilePage() {
         method: "PATCH",
         body: JSON.stringify(body),
       });
-      await refresh();
       await load();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Save failed");

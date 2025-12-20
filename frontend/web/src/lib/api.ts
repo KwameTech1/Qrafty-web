@@ -57,6 +57,17 @@ export type ApiError = {
   error: string;
 };
 
+async function maybeAttachClerkAuth(headers: Headers) {
+  if (typeof window === "undefined") return;
+  if (headers.has("authorization")) return;
+
+  const clerk = (window as unknown as { Clerk?: any }).Clerk;
+  const token: string | null | undefined = await clerk?.session?.getToken?.();
+  if (token) {
+    headers.set("authorization", `Bearer ${token}`);
+  }
+}
+
 export async function apiFetch<T>(
   path: string,
   init?: RequestInit
@@ -68,6 +79,8 @@ export async function apiFetch<T>(
   if (init?.body != null && !headers.has("content-type")) {
     headers.set("content-type", "application/json");
   }
+
+  await maybeAttachClerkAuth(headers);
 
   const res = await fetch(`${API_URL}${path}`, {
     ...init,

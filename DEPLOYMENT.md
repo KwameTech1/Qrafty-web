@@ -21,6 +21,7 @@ Set these env vars on the API service:
 - `DATABASE_URL` (Render provides this if you connect the database)
 - `WEB_ORIGIN` = your Vercel URL, e.g. `https://your-app.vercel.app`
 - `JWT_SECRET` (min 32 chars)
+- `CLERK_SECRET_KEY`
 
 Optional (only if using Google sign-in):
 
@@ -48,9 +49,41 @@ In Vercel, import the repo and set:
 
 ### 2) Environment variables (Vercel)
 
-- `VITE_API_URL` = your Render API base URL, e.g. `https://qrafty-api.onrender.com`
+- `VITE_CLERK_PUBLISHABLE_KEY`
+- `VITE_API_URL` = your Render API base URL, e.g. `https://qrafty-api.onrender.com` (optional in production; the web app uses `/api` proxy by default)
 
-### 3) SPA routing
+### 3) Clerk dashboard settings (production + dev)
+
+In the Clerk Dashboard for your application, add these so redirects and token requests work for your deployed domains.
+
+**Production domain**
+
+- Base domain: `https://qrafty-web.vercel.app`
+- Allowed origins (sometimes called “Allowed origins” / “Authorized origins”):
+  - `https://qrafty-web.vercel.app`
+- Allowed redirect URLs (sometimes called “Redirect URLs”):
+  - `https://qrafty-web.vercel.app/login`
+  - `https://qrafty-web.vercel.app/signup`
+  - `https://qrafty-web.vercel.app/app`
+
+If Clerk supports wildcard redirect patterns in your dashboard, you can use:
+
+- `https://qrafty-web.vercel.app/*`
+
+**Local dev**
+
+- Allowed origins:
+  - `http://localhost:5173`
+- Allowed redirect URLs:
+  - `http://localhost:5173/login`
+  - `http://localhost:5173/signup`
+  - `http://localhost:5173/app`
+
+If wildcard redirects are supported, you can use:
+
+- `http://localhost:5173/*`
+
+### 4) SPA routing
 
 `frontend/web/vercel.json` includes a rewrite so routes like `/app/marketplace` work on refresh.
 

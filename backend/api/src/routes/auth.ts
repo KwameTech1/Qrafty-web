@@ -1,3 +1,4 @@
+/*
 import crypto from "crypto";
 
 import type { Request, Response } from "express";
@@ -135,74 +136,6 @@ export function authRouter(env: Env) {
     const existing = await prisma.user.findUnique({
       where: { email: parsed.data.email },
     });
-    if (existing) {
-      return res
-        .status(409)
-        .json({ error: "An account with that email already exists" });
-    }
-
-    const passwordHash = await hashPassword(parsed.data.password);
-
-    const user = await prisma.user.create({
-      data: {
-        email: parsed.data.email,
-        passwordHash,
-      },
-      select: { id: true, email: true, displayName: true },
-    });
-
-    const token = signAuthToken(env, { sub: user.id });
-    res.cookie(getAuthCookieName(), token, buildAuthCookieOptions(env));
-
-    return res.status(201).json({ token, user: publicUser(user) });
-  });
-
-  router.post("/login", async (req: Request, res: Response) => {
-    const parsed = emailPasswordSchema.safeParse(req.body);
-    if (!parsed.success) {
-      return res.status(400).json({ error: "Invalid input" });
-    }
-
-    const user = await prisma.user.findUnique({
-      where: { email: parsed.data.email },
-    });
-    if (!user) {
-      return res.status(401).json({ error: "Invalid email or password" });
-    }
-
-    if (!user.passwordHash) {
-      return res.status(400).json({
-        error: "This account uses Google sign-in. Use Continue with Google.",
-      });
-    }
-
-    const ok = await verifyPassword(user.passwordHash, parsed.data.password);
-    if (!ok) {
-      return res.status(401).json({ error: "Invalid email or password" });
-    }
-
-    const token = signAuthToken(env, { sub: user.id });
-    res.cookie(getAuthCookieName(), token, buildAuthCookieOptions(env));
-
-    return res.json({
-      token,
-      user: publicUser({
-        id: user.id,
-        email: user.email,
-        displayName: user.displayName,
-      }),
-    });
-  });
-
-  router.get("/me", async (req: Request, res: Response) => {
-    // Never cache auth state.
-    res.setHeader("cache-control", "no-store");
-    res.setHeader("pragma", "no-cache");
-    res.setHeader("expires", "0");
-
-    // Diagnostic headers to debug auth issues in production without leaking tokens.
-    // Helpful when requests are proxied (e.g., via Vercel /api) and cookies may be
-    // blocked or not forwarded.
     const cookieToken = req.cookies?.[getAuthCookieName()];
     res.setHeader("x-qrafty-auth-cookie-present", cookieToken ? "1" : "0");
     if (cookieToken) {
@@ -226,15 +159,15 @@ export function authRouter(env: Env) {
 
     if (!user) {
       return res.json({ user: null });
-    }
-
-    return res.json({ user: publicUser(user) });
-  });
-
   router.post("/logout", (_req, res) => {
     const { maxAge: _maxAge, ...cookieOptions } = buildAuthCookieOptions(env);
     res.clearCookie(getAuthCookieName(), cookieOptions);
     return res.status(204).send();
+        // Clerk handles sign-out on the client; keep this endpoint as a harmless no-op.
+        router.post("/logout", (_req, res) => {
+          res.status(204).send();
+        });
+
   });
 
   // Google OAuth
@@ -438,6 +371,47 @@ export function authRouter(env: Env) {
     } catch {
       return res.redirect(`${webOrigin}/login?error=google_unknown`);
     }
+  });
+
+  return router;
+}
+
+*/
+
+import { Router } from "express";
+
+import { prisma } from "../db";
+import type { Env } from "../env";
+import { getOptionalUserId } from "../auth/middleware";
+
+function publicUser(user: {
+  id: string;
+  email: string;
+  displayName: string | null;
+}) {
+  return { id: user.id, email: user.email, displayName: user.displayName };
+}
+
+export function authRouter(env: Env) {
+  const router = Router();
+
+  router.get("/me", async (req, res) => {
+    res.setHeader("cache-control", "no-store");
+    res.setHeader("pragma", "no-cache");
+
+    const userId = await getOptionalUserId(env, req);
+    if (!userId) return res.json({ user: null });
+
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { id: true, email: true, displayName: true },
+    });
+
+    return res.json({ user: user ? publicUser(user) : null });
+  });
+
+  router.post("/logout", (_req, res) => {
+    res.status(204).send();
   });
 
   return router;

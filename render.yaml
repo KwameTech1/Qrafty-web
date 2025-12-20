@@ -17,6 +17,8 @@ services:
           property: connectionString
       - key: JWT_SECRET
         generateValue: true
+      # Required for Clerk auth (set in Render dashboard)
+      # - key: CLERK_SECRET_KEY
       # Set this in Render dashboard (or add here) to your deployed web app origin.
       # Example: https://<your-frontend-domain>
       # - key: WEB_ORIGIN

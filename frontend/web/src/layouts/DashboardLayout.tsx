@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
-import { useAuth } from "../auth/AuthContext";
+import { useClerk, useUser } from "@clerk/clerk-react";
 
 const navSections: Array<{
   title: string;
@@ -61,11 +61,13 @@ function NavItem({
 }
 
 export default function DashboardLayout() {
-  const { user, logout } = useAuth();
+  const { user, isLoaded } = useUser();
+  const { signOut } = useClerk();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-  const rawName = (user?.displayName ?? "").trim();
-  const fallbackName = (user?.email ?? "").split("@")[0] ?? "";
+  const rawName = (user?.fullName ?? "").trim();
+  const fallbackName =
+    (user?.primaryEmailAddress?.emailAddress ?? "").split("@")[0] ?? "";
   const firstName = (rawName || fallbackName).trim().split(/\s+/)[0] || "";
   const greetingName = firstName
     ? firstName.charAt(0).toUpperCase() + firstName.slice(1)
@@ -73,7 +75,7 @@ export default function DashboardLayout() {
 
   const onLogout = () => {
     setMobileNavOpen(false);
-    void logout();
+    void signOut();
   };
 
   useEffect(() => {
@@ -106,7 +108,7 @@ export default function DashboardLayout() {
             <div className="min-w-0">
               <p className="text-xs text-slate-600">Welcome</p>
               <p className="truncate text-sm font-semibold text-slate-900">
-                {greetingName || "Account"}
+                {isLoaded ? greetingName || "Account" : "Loading…"}
               </p>
             </div>
           </div>

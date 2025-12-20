@@ -1,12 +1,12 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-import { useAuth } from "./AuthContext";
+import { useAuth } from "@clerk/clerk-react";
 
 export default function RequireAuth() {
-  const { user, ready } = useAuth();
+  const { isLoaded, isSignedIn } = useAuth();
   const location = useLocation();
 
-  if (!ready) {
+  if (!isLoaded) {
     return (
       <main className="min-h-screen p-6">
         <div className="mx-auto w-full max-w-md">
@@ -16,7 +16,7 @@ export default function RequireAuth() {
     );
   }
 
-  if (!user) {
+  if (!isSignedIn) {
     const next = `${location.pathname}${location.search}`;
     return <Navigate to={`/login?next=${encodeURIComponent(next)}`} replace />;
   }

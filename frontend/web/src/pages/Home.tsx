@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { useAuth } from "../auth/AuthContext";
+import { useAuth as useClerkAuth, useClerk } from "@clerk/clerk-react";
+
 import Footer from "../components/Footer";
 
 function HeroIllustration() {
@@ -171,7 +172,8 @@ function HeroIllustration() {
 }
 
 export default function Home() {
-  const { user, logout } = useAuth();
+  const { isLoaded, isSignedIn } = useClerkAuth();
+  const { signOut } = useClerk();
 
   return (
     <main className="flex min-h-screen flex-col bg-linear-to-b from-white to-blue-50">
@@ -190,7 +192,7 @@ export default function Home() {
             </p>
           </Link>
 
-          {user ? (
+          {isLoaded && isSignedIn ? (
             <Link
               className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               to="/app"
@@ -225,7 +227,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  {user ? (
+                  {isLoaded && isSignedIn ? (
                     <>
                       <Link
                         className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -236,7 +238,7 @@ export default function Home() {
                       <button
                         className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                         type="button"
-                        onClick={() => void logout()}
+                        onClick={() => void signOut()}
                       >
                         Logout
                       </button>
@@ -517,7 +519,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
-                {user ? (
+                {isLoaded && isSignedIn ? (
                   <Link
                     className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     to="/app"

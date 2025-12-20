@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import { clerkMiddleware } from "@clerk/express";
 
 import { getEnv } from "./env";
 import { applySecurity } from "./middleware/security";
@@ -112,6 +113,8 @@ app.use(cors({ origin: buildCorsOriginChecker(), credentials: true }));
 app.use(express.json({ limit: "1mb" }));
 app.use(cookieParser());
 app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
+
+app.use(clerkMiddleware({ secretKey: env.CLERK_SECRET_KEY }));
 
 app.use("/auth", authRouter(env));
 app.use("/analytics", analyticsRouter(env));
