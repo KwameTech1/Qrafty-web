@@ -66,6 +66,12 @@ function pickForwardHeaders(req: VercelRequestLike) {
   return headers;
 }
 
+function stripCookieDomain(setCookie: string) {
+  // If the upstream ever includes a Domain attribute, the browser will not store
+  // it for qrafty-web.vercel.app. Ensure host-only cookies.
+  return setCookie.replace(/;\s*domain=[^;]*/i, "");
+}
+
 export default async function handler(
   req: VercelRequestLike,
   res: VercelResponseLike
@@ -123,10 +129,13 @@ export default async function handler(
       : [];
 
   if (setCookies.length > 0) {
-    res.setHeader("set-cookie", setCookies);
+    res.setHeader(
+      "set-cookie",
+      setCookies.map((c) => stripCookieDomain(c))
+    );
   } else {
     const single = upstream.headers.get("set-cookie");
-    if (single) res.setHeader("set-cookie", single);
+    if (single) res.setHeader("set-cookie", stripCookieDomain(single));
   }
 
   const buf = Buffer.from(await upstream.arrayBuffer());

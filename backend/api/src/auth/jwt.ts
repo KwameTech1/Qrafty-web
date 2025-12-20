@@ -32,9 +32,9 @@ export function buildAuthCookieOptions(env: Env) {
   return {
     httpOnly: true,
     secure: env.NODE_ENV === "production",
-    sameSite: (env.NODE_ENV === "production" ? "none" : "lax") as
-      | "none"
-      | "lax",
+    // With the web app proxying API calls through same-origin (/api), cookies
+    // no longer need SameSite=None in production.
+    sameSite: "lax" as const,
     path: "/",
     maxAge: 1000 * 60 * 60 * 24 * 7,
   };
