@@ -18,10 +18,13 @@ services:
       - key: JWT_SECRET
         generateValue: true
       # Required for Clerk auth (set in Render dashboard)
-      # - key: CLERK_SECRET_KEY
-      # Set this in Render dashboard (or add here) to your deployed web app origin.
+      - key: CLERK_SECRET_KEY
+        sync: false
+
+      # Set this in Render dashboard to your deployed web app origin.
       # Example: https://<your-frontend-domain>
-      # - key: WEB_ORIGIN
+      - key: WEB_ORIGIN
+        sync: false
       # - key: GOOGLE_CLIENT_ID
       # - key: GOOGLE_CLIENT_SECRET
       # - key: GOOGLE_REDIRECT_URL
