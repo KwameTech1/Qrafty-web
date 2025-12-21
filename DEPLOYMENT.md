@@ -20,7 +20,6 @@ Set these env vars on the API service:
 
 - `DATABASE_URL` (Render provides this if you connect the database)
 - `WEB_ORIGIN` = your Vercel URL, e.g. `https://your-app.vercel.app`
-- `JWT_SECRET` (min 32 chars)
 - `CLERK_SECRET_KEY`
 
 Optional (only if using Google sign-in):

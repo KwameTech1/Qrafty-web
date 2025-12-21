@@ -19,8 +19,6 @@ const envSchema = z.object({
   WEB_ORIGIN: z.string().url().default("https://qrafty-web.vercel.app"),
   WEB_ORIGINS: optionalNonEmptyString,
   DATABASE_URL: z.string().min(1),
-  JWT_SECRET: z.string().min(32),
-
   CLERK_SECRET_KEY: z.string().min(1),
 
   // Optional for local dev; required for Google sign-in endpoints.
