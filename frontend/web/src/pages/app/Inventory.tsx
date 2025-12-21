@@ -34,9 +34,15 @@ export default function Inventory() {
     const items = data?.items ?? [];
     return {
       cards: items.length,
-      active: items.filter((i) => i.isActive).length,
-      scans: items.reduce((acc, i) => acc + (i.scans ?? 0), 0),
-      contacts: items.reduce((acc, i) => acc + (i.contacts ?? 0), 0),
+      active: items.filter((i: InventoryItem) => i.isActive).length,
+      scans: items.reduce(
+        (acc: number, i: InventoryItem) => acc + (i.scans ?? 0),
+        0
+      ),
+      contacts: items.reduce(
+        (acc: number, i: InventoryItem) => acc + (i.contacts ?? 0),
+        0
+      ),
     };
   }, [data]);
 
@@ -128,7 +134,7 @@ export default function Inventory() {
           </div>
         ) : (
           <ul className="divide-y divide-slate-200">
-            {data.items.map((item) => (
+            {data.items.map((item: InventoryItem) => (
               <li key={item.id} className="p-4">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>

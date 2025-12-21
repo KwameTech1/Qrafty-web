@@ -20,6 +20,7 @@ const envSchema = z.object({
   WEB_ORIGINS: optionalNonEmptyString,
   DATABASE_URL: z.string().min(1),
   CLERK_SECRET_KEY: z.string().min(1),
+  CLERK_PUBLISHABLE_KEY: z.string().min(1),
 
   // Optional for local dev; required for Google sign-in endpoints.
   GOOGLE_CLIENT_ID: optionalNonEmptyString,

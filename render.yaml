@@ -18,6 +18,8 @@ services:
       # Required for Clerk auth (set in Render dashboard)
       - key: CLERK_SECRET_KEY
         sync: false
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
 
       # Set this in Render dashboard to your deployed web app origin.
       # Example: https://<your-frontend-domain>

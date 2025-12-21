@@ -114,7 +114,12 @@ app.use(express.json({ limit: "1mb" }));
 app.use(cookieParser());
 app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
 
-app.use(clerkMiddleware({ secretKey: env.CLERK_SECRET_KEY }));
+app.use(
+  clerkMiddleware({
+    secretKey: env.CLERK_SECRET_KEY,
+    publishableKey: env.CLERK_PUBLISHABLE_KEY,
+  })
+);
 
 app.use("/auth", authRouter(env));
 app.use("/analytics", analyticsRouter(env));
