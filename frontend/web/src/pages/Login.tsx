@@ -16,8 +16,7 @@ export default function Login() {
             routing="path"
             path="/login"
             signUpUrl={`/signup?next=${encodeURIComponent(next)}`}
-            afterSignInUrl={next}
-            afterSignUpUrl={next}
+            fallbackRedirectUrl={next}
           />
         </div>
       </div>

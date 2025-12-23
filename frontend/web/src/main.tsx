@@ -26,8 +26,8 @@ export function ClerkProviderWithRouter({
       publishableKey={publishableKey}
       signInUrl="/login"
       signUpUrl="/signup"
-      afterSignInUrl="/app"
-      afterSignUpUrl="/app"
+      signInFallbackRedirectUrl="/app"
+      signUpFallbackRedirectUrl="/app"
       routerPush={(to) => navigate(to)}
       routerReplace={(to) => navigate(to, { replace: true })}
     >
