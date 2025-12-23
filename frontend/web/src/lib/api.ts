@@ -6,15 +6,6 @@ function isLoopbackHostname(hostname: string) {
 function resolveApiUrl() {
   const configured = import.meta.env.VITE_API_URL;
   if (configured) {
-    // In production, cookie auth works most reliably when the API is same-origin
-    // via the Vercel /api proxy. If an external URL is configured, prefer /api.
-    if (import.meta.env.PROD) {
-      const trimmed = configured.trim();
-      if (trimmed !== "/api") {
-        return "/api";
-      }
-    }
-
     if (typeof window !== "undefined") {
       try {
         const cfg = new URL(configured);
