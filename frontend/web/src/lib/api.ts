@@ -38,6 +38,14 @@ function resolveApiUrl() {
 
 const API_URL = resolveApiUrl();
 
+type ClerkWindow = typeof window & {
+  Clerk?: {
+    session?: {
+      getToken?: () => Promise<string | null>;
+    };
+  };
+};
+
 if (import.meta.env.DEV) {
   console.debug(
     `[api] VITE_API_URL=${import.meta.env.VITE_API_URL ?? "(unset)"} using=${API_URL}`
@@ -52,7 +60,7 @@ async function maybeAttachClerkAuth(headers: Headers) {
   if (typeof window === "undefined") return;
   if (headers.has("authorization")) return;
 
-  const clerk = (window as unknown as { Clerk?: any }).Clerk;
+  const clerk = (window as ClerkWindow).Clerk;
   const token: string | null | undefined = await clerk?.session?.getToken?.();
   if (token) {
     headers.set("authorization", `Bearer ${token}`);
