@@ -16,7 +16,6 @@ export default function Signup() {
             routing="path"
             path="/signup"
             signInUrl={`/login?next=${encodeURIComponent(next)}`}
-            fallbackRedirectUrl={next}
           />
         </div>
       </div>
