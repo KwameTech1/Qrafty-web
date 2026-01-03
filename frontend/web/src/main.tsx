@@ -14,10 +14,6 @@ export function ClerkProviderWithRouter({
   const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as
     | string
     | undefined;
-  const clerkJSUrl = import.meta.env.VITE_CLERK_JS_URL as string | undefined;
-  const frontendApi = import.meta.env.VITE_CLERK_FRONTEND_API as
-    | string
-    | undefined;
 
   if (!publishableKey) {
     throw new Error(
@@ -26,18 +22,12 @@ export function ClerkProviderWithRouter({
   }
 
   if (import.meta.env.DEV) {
-    console.debug(
-      `[clerk] publishable key set=${Boolean(publishableKey)} frontendApi=${
-        frontendApi ?? "(unset)"
-      } clerkJSUrl=${clerkJSUrl ?? "(default)"}`
-    );
+    console.debug(`[clerk] publishable key set=${Boolean(publishableKey)}`);
   }
 
   return (
     <ClerkProvider
       publishableKey={publishableKey}
-      frontendApi={frontendApi}
-      clerkJSUrl={clerkJSUrl}
       signInUrl="/login"
       signUpUrl="/signup"
       signInFallbackRedirectUrl="/app"

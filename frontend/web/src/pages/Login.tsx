@@ -13,8 +13,7 @@ export default function Login() {
       <div className="flex-1 p-6">
         <div className="mx-auto w-full max-w-md">
           <SignIn
-            routing="path"
-            path="/login"
+            routing="hash"
             signUpUrl={`/signup?next=${encodeURIComponent(next)}`}
             fallbackRedirectUrl={next}
           />
