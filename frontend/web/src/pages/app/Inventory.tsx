@@ -348,80 +348,129 @@ export default function Inventory() {
         </div>
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-md border border-slate-200">
+      <div className="rounded-lg border border-slate-200 bg-white shadow-sm">
         {loading ? (
-          <div className="p-4">
-            <p className="text-sm text-slate-600">Loading…</p>
+          <div className="flex items-center justify-center p-8">
+            <div className="flex items-center gap-2">
+              <svg className="h-5 w-5 animate-spin text-slate-400" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <p className="text-sm text-slate-600">Loading inventory…</p>
+            </div>
           </div>
         ) : !data ? (
-          <div className="p-4">
-            <p className="text-sm text-slate-600">Loading…</p>
+          <div className="flex items-center justify-center p-8">
+            <div className="flex items-center gap-2">
+              <svg className="h-5 w-5 animate-spin text-slate-400" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <p className="text-sm text-slate-600">Loading inventory…</p>
+            </div>
           </div>
         ) : data.items.length === 0 ? (
-          <div className="p-4">
-            <p className="text-sm text-slate-600">No QR cards yet.</p>
+          <div className="flex flex-col items-center justify-center p-8 text-center">
+            <svg className="h-12 w-12 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            <h3 className="mt-4 text-lg font-medium text-slate-900">No products yet</h3>
+            <p className="mt-2 text-sm text-slate-600">Get started by creating your first QR card.</p>
             <Link
-              className="mt-2 inline-block text-sm text-blue-700 underline hover:text-blue-800"
+              className="mt-4 inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
               to="/app/qr"
             >
-              Create your first QR card
+              Create QR Card
             </Link>
           </div>
         ) : (
           <ul className="divide-y divide-slate-200">
             {data.items.map((item: InventoryItem) => (
-              <li key={item.id} className="p-4">
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-medium text-slate-900">
-                      {item.label}
-                    </p>
-                    <p className="mt-1 text-xs text-slate-600">
-                      {item.isActive ? "Active" : "Inactive"} · /p/
-                      {item.publicId}
+              <li key={item.id} className="p-6">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-lg font-semibold text-slate-900">
+                        {item.label}
+                      </h3>
+                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                        item.isActive
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-red-100 text-red-800'
+                      }`}>
+                        {item.isActive ? 'Active' : 'Inactive'}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Public ID: {item.publicId}
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
                     <Link
-                      className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-900 hover:bg-slate-50"
+                      className="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                       to={`/p/${item.publicId}`}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Open public page
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      View
                     </Link>
                     <button
-                      className="rounded-md border border-slate-300 bg-yellow-100 px-3 py-1.5 text-xs font-medium text-yellow-900 hover:bg-yellow-200"
+                      className="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-yellow-50 px-3 py-2 text-sm font-medium text-yellow-700 hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
                       onClick={() => openEdit(item)}
                       disabled={loading}
                     >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                      </svg>
                       Edit
                     </button>
                     <button
-                      className="rounded-md border border-slate-300 bg-red-100 px-3 py-1.5 text-xs font-medium text-red-900 hover:bg-red-200"
+                      className="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-red-50 px-3 py-2 text-sm font-medium text-red-700 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                       onClick={() => handleDelete(item.id)}
                       disabled={loading}
                     >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
                       Delete
                     </button>
                   </div>
                 </div>
-                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  <div className="rounded-md bg-slate-50 p-3">
-                    <p className="text-xs text-slate-600">Scans</p>
-                    <p className="mt-1 text-sm font-semibold text-slate-900">
+                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  <div className="rounded-md bg-slate-50 p-4">
+                    <div className="flex items-center gap-2">
+                      <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                      <p className="text-sm font-medium text-slate-600">Scans</p>
+                    </div>
+                    <p className="mt-1 text-2xl font-bold text-slate-900">
                       {item.scans}
                     </p>
                   </div>
-                  <div className="rounded-md bg-slate-50 p-3">
-                    <p className="text-xs text-slate-600">Contacts</p>
-                    <p className="mt-1 text-sm font-semibold text-slate-900">
+                  <div className="rounded-md bg-slate-50 p-4">
+                    <div className="flex items-center gap-2">
+                      <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <p className="text-sm font-medium text-slate-600">Contacts</p>
+                    </div>
+                    <p className="mt-1 text-2xl font-bold text-slate-900">
                       {item.contacts}
                     </p>
                   </div>
-                  <div className="rounded-md bg-slate-50 p-3 sm:col-span-2">
-                    <p className="text-xs text-slate-600">Last activity</p>
-                    <p className="mt-1 text-sm font-semibold text-slate-900">
+                  <div className="rounded-md bg-slate-50 p-4 sm:col-span-2">
+                    <div className="flex items-center gap-2">
+                      <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="text-sm font-medium text-slate-600">Last Activity</p>
+                    </div>
+                    <p className="mt-1 text-lg font-semibold text-slate-900">
                       {formatDate(item.lastActivityAt)}
                     </p>
                   </div>
