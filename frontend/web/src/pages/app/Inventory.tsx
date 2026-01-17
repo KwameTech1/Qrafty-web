@@ -602,25 +602,43 @@ export default function Inventory() {
       {showAdd && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
           <div className="flex min-h-screen items-center justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity" onClick={() => setShowAdd(false)}></div>
+            <div
+              className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"
+              onClick={() => setShowAdd(false)}
+            ></div>
             <div className="inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle">
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-medium leading-6 text-slate-900">Add New Product</h3>
+                  <h3 className="text-lg font-medium leading-6 text-slate-900">
+                    Add New Product
+                  </h3>
                   <button
                     type="button"
                     className="rounded-md bg-white text-slate-400 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     onClick={() => setShowAdd(false)}
                   >
                     <span className="sr-only">Close</span>
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </div>
                 <form onSubmit={handleAdd} className="space-y-4">
                   <div>
-                    <label htmlFor="add-label" className="block text-sm font-medium text-slate-700">
+                    <label
+                      htmlFor="add-label"
+                      className="block text-sm font-medium text-slate-700"
+                    >
                       Product Label
                     </label>
                     <input
@@ -628,19 +646,29 @@ export default function Inventory() {
                       className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                       type="text"
                       value={formState.label}
-                      onChange={(e) => setFormState((f) => ({ ...f, label: e.target.value }))}
+                      onChange={(e) =>
+                        setFormState((f) => ({ ...f, label: e.target.value }))
+                      }
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="add-status" className="block text-sm font-medium text-slate-700">
+                    <label
+                      htmlFor="add-status"
+                      className="block text-sm font-medium text-slate-700"
+                    >
                       Status
                     </label>
                     <select
                       id="add-status"
                       className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                       value={formState.isActive ? "true" : "false"}
-                      onChange={(e) => setFormState((f) => ({ ...f, isActive: e.target.value === "true" }))}
+                      onChange={(e) =>
+                        setFormState((f) => ({
+                          ...f,
+                          isActive: e.target.value === "true",
+                        }))
+                      }
                     >
                       <option value="true">Active</option>
                       <option value="false">Inactive</option>
@@ -660,7 +688,7 @@ export default function Inventory() {
                       className="rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                       disabled={loading}
                     >
-                      {loading ? 'Adding...' : 'Add Product'}
+                      {loading ? "Adding..." : "Add Product"}
                     </button>
                   </div>
                 </form>
@@ -674,25 +702,43 @@ export default function Inventory() {
       {showEdit && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
           <div className="flex min-h-screen items-center justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity" onClick={() => setShowEdit(null)}></div>
+            <div
+              className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"
+              onClick={() => setShowEdit(null)}
+            ></div>
             <div className="inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle">
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-medium leading-6 text-slate-900">Edit Product</h3>
+                  <h3 className="text-lg font-medium leading-6 text-slate-900">
+                    Edit Product
+                  </h3>
                   <button
                     type="button"
                     className="rounded-md bg-white text-slate-400 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     onClick={() => setShowEdit(null)}
                   >
                     <span className="sr-only">Close</span>
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </div>
                 <form onSubmit={handleEdit} className="space-y-4">
                   <div>
-                    <label htmlFor="edit-label" className="block text-sm font-medium text-slate-700">
+                    <label
+                      htmlFor="edit-label"
+                      className="block text-sm font-medium text-slate-700"
+                    >
                       Product Label
                     </label>
                     <input
@@ -700,19 +746,29 @@ export default function Inventory() {
                       className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                       type="text"
                       value={formState.label}
-                      onChange={(e) => setFormState((f) => ({ ...f, label: e.target.value }))}
+                      onChange={(e) =>
+                        setFormState((f) => ({ ...f, label: e.target.value }))
+                      }
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="edit-status" className="block text-sm font-medium text-slate-700">
+                    <label
+                      htmlFor="edit-status"
+                      className="block text-sm font-medium text-slate-700"
+                    >
                       Status
                     </label>
                     <select
                       id="edit-status"
                       className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                       value={formState.isActive ? "true" : "false"}
-                      onChange={(e) => setFormState((f) => ({ ...f, isActive: e.target.value === "true" }))}
+                      onChange={(e) =>
+                        setFormState((f) => ({
+                          ...f,
+                          isActive: e.target.value === "true",
+                        }))
+                      }
                     >
                       <option value="true">Active</option>
                       <option value="false">Inactive</option>
@@ -732,7 +788,7 @@ export default function Inventory() {
                       className="rounded-md bg-yellow-600 px-4 py-2 text-sm font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
                       disabled={loading}
                     >
-                      {loading ? 'Saving...' : 'Save Changes'}
+                      {loading ? "Saving..." : "Save Changes"}
                     </button>
                   </div>
                 </form>
