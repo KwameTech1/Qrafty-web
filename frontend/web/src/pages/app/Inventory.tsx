@@ -90,7 +90,6 @@ export default function Inventory() {
 
   useEffect(() => {
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Add product handler
@@ -106,7 +105,7 @@ export default function Inventory() {
       setShowAdd(false);
       setFormState({ label: "", isActive: true });
       fetchData();
-    } catch (err) {
+    } catch (_err) {
       setError("Failed to add product");
     } finally {
       setLoading(false);
@@ -127,7 +126,7 @@ export default function Inventory() {
       setShowEdit(null);
       setFormState({ label: "", isActive: true });
       fetchData();
-    } catch (err) {
+    } catch (_err) {
       setError("Failed to edit product");
     } finally {
       setLoading(false);
@@ -142,7 +141,7 @@ export default function Inventory() {
     try {
       await apiFetch(`/inventory/qr-cards/${id}`, { method: "DELETE" });
       fetchData();
-    } catch (err) {
+    } catch (_err) {
       setError("Failed to delete product");
     } finally {
       setLoading(false);
