@@ -105,7 +105,7 @@ export default function Inventory() {
       setShowAdd(false);
       setFormState({ label: "", isActive: true });
       fetchData();
-    } catch (_err) {
+    } catch {
       setError("Failed to add product");
     } finally {
       setLoading(false);
@@ -126,7 +126,7 @@ export default function Inventory() {
       setShowEdit(null);
       setFormState({ label: "", isActive: true });
       fetchData();
-    } catch (_err) {
+    } catch {
       setError("Failed to edit product");
     } finally {
       setLoading(false);
@@ -141,7 +141,7 @@ export default function Inventory() {
     try {
       await apiFetch(`/inventory/qr-cards/${id}`, { method: "DELETE" });
       fetchData();
-    } catch (_err) {
+    } catch {
       setError("Failed to delete product");
     } finally {
       setLoading(false);
