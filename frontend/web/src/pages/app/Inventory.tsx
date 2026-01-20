@@ -41,6 +41,10 @@ export default function Inventory() {
     isActive: true,
   });
   const [loading, setLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<
+    "all" | "active" | "inactive"
+  >("all");
 
   const totals = useMemo(() => {
     const items = data?.items ?? [];
@@ -49,14 +53,28 @@ export default function Inventory() {
       active: items.filter((i: InventoryItem) => i.isActive).length,
       scans: items.reduce(
         (acc: number, i: InventoryItem) => acc + (i.scans ?? 0),
-        0
+        0,
       ),
       contacts: items.reduce(
         (acc: number, i: InventoryItem) => acc + (i.contacts ?? 0),
-        0
+        0,
       ),
     };
   }, [data]);
+
+  const filteredItems = useMemo(() => {
+    if (!data?.items) return [];
+    return data.items.filter((item) => {
+      const matchesSearch =
+        item.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.publicId.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesStatus =
+        statusFilter === "all" ||
+        (statusFilter === "active" && item.isActive) ||
+        (statusFilter === "inactive" && !item.isActive);
+      return matchesSearch && matchesStatus;
+    });
+  }, [data, searchQuery, statusFilter]);
 
   const fetchData = async () => {
     setLoading(true);
@@ -213,6 +231,57 @@ export default function Inventory() {
             </svg>
             Manage QR Cards
           </Link>
+        </div>
+      </div>
+
+      {/* Search and Filter Controls */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex-1">
+          <label htmlFor="search" className="sr-only">
+            Search products
+          </label>
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg
+                className="h-5 w-5 text-slate-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            <input
+              id="search"
+              className="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-md leading-5 bg-white placeholder-slate-500 focus:outline-none focus:placeholder-slate-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search by name or public ID..."
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="sm:w-48">
+          <label htmlFor="status-filter" className="sr-only">
+            Filter by status
+          </label>
+          <select
+            id="status-filter"
+            className="block w-full pl-3 pr-10 py-2 text-base border border-slate-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+            value={statusFilter}
+            onChange={(e) =>
+              setStatusFilter(e.target.value as "all" | "active" | "inactive")
+            }
+          >
+            <option value="all">All Status</option>
+            <option value="active">Active Only</option>
+            <option value="inactive">Inactive Only</option>
+          </select>
         </div>
       </div>
 
@@ -399,7 +468,7 @@ export default function Inventory() {
               <p className="text-sm text-slate-600">Loading inventory…</p>
             </div>
           </div>
-        ) : data.items.length === 0 ? (
+        ) : filteredItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center p-8 text-center">
             <svg
               className="h-12 w-12 text-slate-400"
@@ -411,25 +480,30 @@ export default function Inventory() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
             <h3 className="mt-4 text-lg font-medium text-slate-900">
-              No products yet
+              No products found
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Get started by creating your first QR card.
+              Try adjusting your search or filter criteria.
             </p>
-            <Link
-              className="mt-4 inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-              to="/app/qr"
-            >
-              Create QR Card
-            </Link>
+            {(searchQuery || statusFilter !== "all") && (
+              <button
+                className="mt-4 inline-flex items-center gap-2 rounded-md bg-slate-600 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700"
+                onClick={() => {
+                  setSearchQuery("");
+                  setStatusFilter("all");
+                }}
+              >
+                Clear Filters
+              </button>
+            )}
           </div>
         ) : (
           <ul className="divide-y divide-slate-200">
-            {data.items.map((item: InventoryItem) => (
+            {filteredItems.map((item: InventoryItem) => (
               <li key={item.id} className="p-6">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="flex-1">
