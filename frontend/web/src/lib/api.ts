@@ -47,8 +47,9 @@ type ClerkWindow = typeof window & {
 };
 
 if (import.meta.env.DEV) {
+  // Only log in development
   console.debug(
-    `[api] VITE_API_URL=${import.meta.env.VITE_API_URL ?? "(unset)"} using=${API_URL}`
+    `[api] VITE_API_URL=${import.meta.env.VITE_API_URL ?? "(unset)"} using=${API_URL}`,
   );
 }
 
@@ -69,7 +70,8 @@ async function maybeAttachClerkAuth(headers: Headers) {
 
 export async function apiFetch<T>(
   path: string,
-  init?: RequestInit
+  init?: RequestInit,
+  retryCount = 0,
 ): Promise<T> {
   const headers = new Headers(init?.headers ?? undefined);
 
@@ -81,34 +83,59 @@ export async function apiFetch<T>(
 
   await maybeAttachClerkAuth(headers);
 
-  const res = await fetch(`${API_URL}${path}`, {
-    ...init,
-    headers,
-    credentials: "include",
-  });
+  const url = `${API_URL}${path}`;
+  try {
+    const res = await fetch(url, {
+      ...init,
+      headers,
+      credentials: "include",
+    });
 
-  const contentType = res.headers.get("content-type") ?? "";
-  const text = await res.text();
-  const isJson = contentType.toLowerCase().includes("application/json");
-  const data = text && isJson ? (JSON.parse(text) as unknown) : null;
+    const contentType = res.headers.get("content-type") ?? "";
+    const text = await res.text();
+    const isJson = contentType.toLowerCase().includes("application/json");
+    const data = text && isJson ? (JSON.parse(text) as unknown) : null;
 
-  if (text && !isJson) {
-    const snippet = text.slice(0, 140).replace(/\s+/g, " ").trim();
-    throw new Error(
-      `Expected JSON from ${path} but got ${contentType || "unknown"} (${res.status}). ` +
-        `Response starts with: ${snippet}`
-    );
+    if (text && !isJson) {
+      const snippet = text.slice(0, 140).replace(/\s+/g, " ").trim();
+      throw new Error(
+        `Expected JSON from ${path} but got ${contentType || "unknown"} (${res.status}). ` +
+          `Response starts with: ${snippet}`,
+      );
+    }
+
+    if (!res.ok) {
+      // Handle rate limiting with retry
+      if (res.status === 429 && retryCount < 2) {
+        const retryAfter = res.headers.get("retry-after");
+        const delay = retryAfter
+          ? parseInt(retryAfter, 10) * 1000
+          : 1000 * (retryCount + 1);
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return apiFetch<T>(path, init, retryCount + 1);
+      }
+
+      const message =
+        data && typeof data === "object" && data !== null && "error" in data
+          ? String((data as ApiError).error)
+          : `Request failed with status ${res.status}`;
+      throw new Error(message);
+    }
+
+    return data as T;
+  } catch (error) {
+    // Retry network errors
+    if (
+      retryCount < 2 &&
+      (error instanceof TypeError || error.name === "NetworkError")
+    ) {
+      await new Promise((resolve) =>
+        setTimeout(resolve, 1000 * (retryCount + 1)),
+      );
+      return apiFetch<T>(path, init, retryCount + 1);
+    }
+    throw error;
   }
-
-  if (!res.ok) {
-    const message =
-      data && typeof data === "object" && data !== null && "error" in data
-        ? String((data as ApiError).error)
-        : "Request failed";
-    throw new Error(message);
-  }
-
-  return data as T;
 }
 
 export function getApiUrl() {

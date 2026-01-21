@@ -22,6 +22,20 @@ const envSchema = z.object({
   CLERK_SECRET_KEY: z.string().min(1),
   CLERK_PUBLISHABLE_KEY: z.string().min(1),
 
+  // Rate limiting
+  RATE_LIMIT_WINDOW_MS: z
+    .string()
+    .optional()
+    .transform((value: string | undefined) =>
+      value ? Number(value) : 15 * 60 * 1000,
+    ) // 15 minutes
+    .pipe(z.number().int().min(1000)),
+  RATE_LIMIT_MAX_REQUESTS: z
+    .string()
+    .optional()
+    .transform((value: string | undefined) => (value ? Number(value) : 100))
+    .pipe(z.number().int().min(1)),
+
   // Optional for local dev; required for Google sign-in endpoints.
   GOOGLE_CLIENT_ID: optionalNonEmptyString,
   GOOGLE_CLIENT_SECRET: optionalNonEmptyString,
@@ -42,7 +56,7 @@ export function getEnv(): Env {
     // eslint-disable-next-line no-console
     console.error(
       "Invalid environment variables:",
-      parsed.error.flatten().fieldErrors
+      parsed.error.flatten().fieldErrors,
     );
     throw new Error("Invalid environment variables");
   }

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { apiFetch } from "../../lib/api";
@@ -76,73 +76,122 @@ export default function Inventory() {
     });
   }, [data, searchQuery, statusFilter]);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
+    setError(null);
     try {
       const res = await apiFetch<InventoryResponse>("/inventory/qr-cards");
       setData(res);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load inventory");
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to load inventory";
+      setError(errorMessage);
+      console.error("Failed to fetch inventory:", err);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   // Add product handler
-  const handleAdd = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await apiFetch("/inventory/qr-cards", {
-        method: "POST",
-        body: JSON.stringify(formState),
-        headers: { "Content-Type": "application/json" },
-      });
-      setShowAdd(false);
-      setFormState({ label: "", isActive: true });
-      fetchData();
-    } catch {
-      setError("Failed to add product");
-    } finally {
-      setLoading(false);
-    }
-  };
+  const handleAdd = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      const label = formState.label.trim();
+      if (!label) {
+        setError("Product label is required");
+        return;
+      }
+      if (label.length > 100) {
+        setError("Product label must be 100 characters or less");
+        return;
+      }
+
+      setLoading(true);
+      setError(null);
+      try {
+        await apiFetch("/inventory/qr-cards", {
+          method: "POST",
+          body: JSON.stringify({ ...formState, label }),
+          headers: { "Content-Type": "application/json" },
+        });
+        setShowAdd(false);
+        setFormState({ label: "", isActive: true });
+        await fetchData(); // Refresh data
+      } catch (err) {
+        const errorMessage =
+          err instanceof Error ? err.message : "Failed to add product";
+        setError(errorMessage);
+        console.error("Failed to add product:", err);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [formState, fetchData],
+  );
 
   // Edit product handler
-  const handleEdit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!showEdit) return;
-    setLoading(true);
-    try {
-      await apiFetch(`/inventory/qr-cards/${showEdit}`, {
-        method: "PUT",
-        body: JSON.stringify(formState),
-        headers: { "Content-Type": "application/json" },
-      });
-      setShowEdit(null);
-      setFormState({ label: "", isActive: true });
-      fetchData();
-    } catch {
-      setError("Failed to edit product");
-    } finally {
-      setLoading(false);
-    }
-  };
+  const handleEdit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      if (!showEdit) return;
+
+      const label = formState.label.trim();
+      if (!label) {
+        setError("Product label is required");
+        return;
+      }
+      if (label.length > 100) {
+        setError("Product label must be 100 characters or less");
+        return;
+      }
+
+      setLoading(true);
+      setError(null);
+      try {
+        await apiFetch(`/inventory/qr-cards/${showEdit}`, {
+          method: "PUT",
+          body: JSON.stringify({ ...formState, label }),
+          headers: { "Content-Type": "application/json" },
+        });
+        setShowEdit(null);
+        setFormState({ label: "", isActive: true });
+        await fetchData(); // Refresh data
+      } catch (err) {
+        const errorMessage =
+          err instanceof Error ? err.message : "Failed to update product";
+        setError(errorMessage);
+        console.error("Failed to edit product:", err);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [showEdit, formState, fetchData],
+  );
 
   // Delete product handler
   const handleDelete = async (id: string) => {
-    if (!window.confirm("Are you sure you want to delete this product?"))
+    if (
+      !window.confirm(
+        "Are you sure you want to delete this product? This action cannot be undone.",
+      )
+    ) {
       return;
+    }
+
     setLoading(true);
+    setError(null);
     try {
       await apiFetch(`/inventory/qr-cards/${id}`, { method: "DELETE" });
-      fetchData();
-    } catch {
-      setError("Failed to delete product");
+      await fetchData(); // Refresh data
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to delete product";
+      setError(errorMessage);
+      console.error("Failed to delete product:", err);
     } finally {
       setLoading(false);
     }
@@ -723,7 +772,18 @@ export default function Inventory() {
                         setFormState((f) => ({ ...f, label: e.target.value }))
                       }
                       required
+                      maxLength={100}
+                      placeholder="Enter product name"
+                      aria-describedby="add-label-error"
                     />
+                    {formState.label.length > 90 && (
+                      <p
+                        className="mt-1 text-sm text-amber-600"
+                        id="add-label-error"
+                      >
+                        {100 - formState.label.length} characters remaining
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -823,7 +883,18 @@ export default function Inventory() {
                         setFormState((f) => ({ ...f, label: e.target.value }))
                       }
                       required
+                      maxLength={100}
+                      placeholder="Enter product name"
+                      aria-describedby="edit-label-error"
                     />
+                    {formState.label.length > 90 && (
+                      <p
+                        className="mt-1 text-sm text-amber-600"
+                        id="edit-label-error"
+                      >
+                        {100 - formState.label.length} characters remaining
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label

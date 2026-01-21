@@ -45,7 +45,7 @@ export function inventoryRouter(env: Env) {
       `;
 
       return res.json({ items: rows });
-    }
+    },
   );
 
   // Add a new QR card (product)
@@ -55,25 +55,38 @@ export function inventoryRouter(env: Env) {
     async (req: Request, res: Response) => {
       const userId = (req as AuthenticatedRequest).userId;
       const { label, isActive } = req.body;
-      if (!label || typeof label !== "string") {
-        return res.status(400).json({ error: "Label is required" });
+
+      // Validate input
+      if (!label || typeof label !== "string" || label.trim().length === 0) {
+        return res
+          .status(400)
+          .json({ error: "Label is required and must be a non-empty string" });
       }
+
+      const trimmedLabel = label.trim();
+      if (trimmedLabel.length > 100) {
+        return res
+          .status(400)
+          .json({ error: "Label must be 100 characters or less" });
+      }
+
       try {
         // Generate a unique publicId (could be random or based on label)
         const publicId = Math.random().toString(36).substring(2, 10);
         const card = await prisma.qRCard.create({
           data: {
             userId,
-            label,
+            label: trimmedLabel,
             publicId,
             isActive: isActive !== undefined ? Boolean(isActive) : true,
           },
         });
         return res.status(201).json(card);
       } catch (err) {
-        return res.status(500).json({ error: "Failed to add product" });
+        console.error("Failed to create QR card:", err);
+        return res.status(500).json({ error: "Failed to create product" });
       }
-    }
+    },
   );
 
   // Edit a QR card (product)
@@ -84,24 +97,41 @@ export function inventoryRouter(env: Env) {
       const userId = (req as AuthenticatedRequest).userId;
       const { id } = req.params;
       const { label, isActive } = req.body;
+
+      // Validate input
+      if (label !== undefined) {
+        if (typeof label !== "string" || label.trim().length === 0) {
+          return res
+            .status(400)
+            .json({ error: "Label must be a non-empty string" });
+        }
+        if (label.trim().length > 100) {
+          return res
+            .status(400)
+            .json({ error: "Label must be 100 characters or less" });
+        }
+      }
+
       try {
         const card = await prisma.qRCard.findUnique({ where: { id } });
         if (!card || card.userId !== userId) {
           return res.status(404).json({ error: "Product not found" });
         }
+
+        const updateData: { label?: string; isActive?: boolean } = {};
+        if (label !== undefined) updateData.label = label.trim();
+        if (isActive !== undefined) updateData.isActive = Boolean(isActive);
+
         const updated = await prisma.qRCard.update({
           where: { id },
-          data: {
-            label: label !== undefined ? label : card.label,
-            isActive:
-              isActive !== undefined ? Boolean(isActive) : card.isActive,
-          },
+          data: updateData,
         });
         return res.json(updated);
       } catch (err) {
+        console.error("Failed to update QR card:", err);
         return res.status(500).json({ error: "Failed to update product" });
       }
-    }
+    },
   );
 
   // Delete a QR card (product)
@@ -121,7 +151,7 @@ export function inventoryRouter(env: Env) {
       } catch (err) {
         return res.status(500).json({ error: "Failed to delete product" });
       }
-    }
+    },
   );
 
   return router;
