@@ -123,18 +123,24 @@ export async function apiFetch<T>(
     }
 
     return data as T;
-  } catch (error) {
-    // Retry network errors
-    if (
-      retryCount < 2 &&
-      (error instanceof TypeError || error.name === "NetworkError")
-    ) {
+  } catch (error: unknown) {
+    // Narrow unknown error to inspect safely
+    const errIsError = error instanceof Error;
+    const isNetworkLike =
+      error instanceof TypeError ||
+      (errIsError && (error as Error).name === "NetworkError");
+
+    // Retry transient network-like errors
+    if (retryCount < 2 && isNetworkLike) {
       await new Promise((resolve) =>
         setTimeout(resolve, 1000 * (retryCount + 1)),
       );
       return apiFetch<T>(path, init, retryCount + 1);
     }
-    throw error;
+
+    // Re-throw preserving original shape when possible
+    if (errIsError) throw error as Error;
+    throw new Error(String(error));
   }
 }
 
