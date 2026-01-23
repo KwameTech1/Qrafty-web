@@ -32,8 +32,7 @@ model User {
 
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
-
-  qrCards     githunumer234
+  qrCards     QRCard[]
   businesses   BusinessProfile[]
 }
 

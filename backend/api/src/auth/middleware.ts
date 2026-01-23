@@ -15,7 +15,7 @@ function getPrimaryEmailAddress(user: {
 
   if (user.primaryEmailAddressId) {
     const primary = emailAddresses.find(
-      (e) => e.id === user.primaryEmailAddressId
+      (e) => e.id === user.primaryEmailAddressId,
     );
     if (primary?.emailAddress) return primary.emailAddress;
   }
@@ -38,11 +38,26 @@ function buildDisplayName(user: {
 
 export async function getOptionalUserId(
   _env: Env,
-  req: Request
+  req: Request,
 ): Promise<string | null> {
   try {
+    // Lightweight debug info to help diagnose authentication failures.
+    // Do not log secrets or token values. Log only presence/keys.
+    try {
+      const hasAuthHeader = Boolean(req.headers.authorization);
+      const cookieNames = Object.keys((req as any).cookies ?? {});
+      // eslint-disable-next-line no-console
+      console.debug(
+        `[auth debug] hasAuthHeader=${hasAuthHeader} cookieCount=${cookieNames.length} cookieNames=${cookieNames.join(",") || "(none)"}`,
+      );
+    } catch (e) {
+      // swallowing debug logging errors to avoid impacting auth flow
+    }
+
     const auth = getAuth(req);
     const clerkUserId = auth.userId;
+    // eslint-disable-next-line no-console
+    console.debug(`[auth debug] clerkUserId present=${Boolean(clerkUserId)}`);
     if (!clerkUserId) return null;
 
     const existing = await prisma.user.findUnique({
