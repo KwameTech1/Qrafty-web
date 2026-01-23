@@ -127,6 +127,29 @@ function getSafeNextPath(value: unknown) {
 export function authRouter(env: Env) {
   const router = Router();
 
+  // Debug endpoint to help trace authentication issues from the client.
+  // Returns presence of Authorization header, cookie keys, and whether Clerk
+  // reports a user id for this request. This is safe to call from a browser
+  // because it does not return any token values or other sensitive data.
+  router.get("/debug", (req, res) => {
+    try {
+      const hasAuthHeader = Boolean(req.headers.authorization);
+      const cookieNames = Object.keys((req as any).cookies ?? {});
+      // Require getAuth at runtime to avoid adding a top-level import that
+      // might change middleware behavior in some environments.
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const { getAuth } = require("@clerk/express");
+      const auth = getAuth(req as any);
+      const clerkUserIdPresent = Boolean(auth?.userId);
+
+      return res.json({ hasAuthHeader, cookieNames, clerkUserIdPresent });
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("/auth/debug error", err);
+      return res.status(500).json({ error: "debug error" });
+    }
+  });
+
   router.post("/signup", async (req: Request, res: Response) => {
     const parsed = emailPasswordSchema.safeParse(req.body);
     if (!parsed.success) {
