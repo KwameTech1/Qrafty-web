@@ -9,18 +9,21 @@ Pandoc is a universal document converter that produces high-quality PDFs.
 ### Installation
 
 **Windows (using Chocolatey):**
+
 ```bash
 choco install pandoc
 choco install miktex  # For better PDF rendering
 ```
 
 **macOS (using Homebrew):**
+
 ```bash
 brew install pandoc
 brew install --cask mactex
 ```
 
 **Ubuntu/Debian:**
+
 ```bash
 sudo apt-get install pandoc texlive-latex-base texlive-latex-extra
 ```
@@ -89,6 +92,7 @@ pandoc cover.md DOCUMENTATION.md \
 
 **Configuration** (Optional):
 Create `.vscode/settings.json`:
+
 ```json
 {
   "markdown-pdf.type": "pdf",
@@ -132,6 +136,7 @@ GitHub automatically renders Markdown beautifully:
 5. Print to PDF (Ctrl+P → Save as PDF)
 
 **Advantages:**
+
 - No installation
 - Professional formatting with GitHub styling
 - Preserves all links and code blocks
@@ -163,6 +168,7 @@ pandoc DOCUMENTATION.md \
 ```
 
 This produces:
+
 - ✅ Professional appearance
 - ✅ Clickable table of contents
 - ✅ Numbered sections
@@ -173,6 +179,7 @@ This produces:
 ## File Size & Quality
 
 **Typical Output:**
+
 - File Size: 800KB - 2MB
 - Quality: Print-ready (300 DPI)
 - Pages: ~25-35 pages
@@ -182,6 +189,7 @@ This produces:
 Once created, you can:
 
 1. **Email to stakeholders**
+
    ```bash
    # Compress if needed
    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 \
@@ -217,6 +225,7 @@ tesseract DOCUMENTATION.pdf DOCUMENTATION-ocr pdf
 ## Troubleshooting
 
 **Issue: Pandoc not found**
+
 ```bash
 # Check installation
 pandoc --version
@@ -227,12 +236,14 @@ brew install pandoc   # macOS
 ```
 
 **Issue: Missing font**
+
 ```bash
 # Use different PDF engine
 pandoc DOCUMENTATION.md -o DOCUMENTATION.pdf --pdf-engine=pdflatex
 ```
 
 **Issue: Markdown not rendering correctly**
+
 ```bash
 # Specify markdown flavor
 pandoc DOCUMENTATION.md \
@@ -241,6 +252,7 @@ pandoc DOCUMENTATION.md \
 ```
 
 **Issue: Code blocks too narrow**
+
 ```bash
 # Adjust margins
 pandoc DOCUMENTATION.md \
@@ -283,6 +295,7 @@ fi
 ```
 
 Make executable and run:
+
 ```bash
 chmod +x build-pdf.sh
 ./build-pdf.sh
@@ -291,6 +304,7 @@ chmod +x build-pdf.sh
 ## Version Control for PDF
 
 Add to `.gitignore` if PDF is large:
+
 ```
 # Generated PDFs
 DOCUMENTATION.pdf
@@ -298,6 +312,7 @@ DOCUMENTATION.pdf
 ```
 
 Or track it if you want versions:
+
 ```bash
 git add DOCUMENTATION.pdf
 git commit -m "docs: update PDF export (January 2026)"
@@ -307,15 +322,16 @@ git commit -m "docs: update PDF export (January 2026)"
 
 ## Summary
 
-| Method | Ease | Quality | Installation | Time |
-|--------|------|---------|--------------|------|
-| Pandoc | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 5 min | 30 sec |
-| VS Code | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 2 min | 1 min |
-| Online | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | None | 2 min |
-| GitHub Print | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | None | 3 min |
-| Google Docs | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 2 min | 2 min |
+| Method       | Ease       | Quality    | Installation | Time   |
+| ------------ | ---------- | ---------- | ------------ | ------ |
+| Pandoc       | ⭐⭐⭐     | ⭐⭐⭐⭐⭐ | 5 min        | 30 sec |
+| VS Code      | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐   | 2 min        | 1 min  |
+| Online       | ⭐⭐⭐⭐⭐ | ⭐⭐⭐     | None         | 2 min  |
+| GitHub Print | ⭐⭐⭐⭐⭐ | ⭐⭐⭐     | None         | 3 min  |
+| Google Docs  | ⭐⭐⭐⭐   | ⭐⭐⭐⭐   | 2 min        | 2 min  |
 
 **Recommended for your team:**
+
 1. **Quick sharing**: Use GitHub PDF Export (Option 4)
 2. **Professional archive**: Use Pandoc (Option 1)
 3. **Collaboration**: Use Google Docs (Option 5)

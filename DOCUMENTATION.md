@@ -33,6 +33,7 @@
 **QRAFTY** is a modern, cloud-native QR code-based digital identity and B2B interaction platform designed for businesses to create, manage, and track digital business cards and professional profiles. The platform enables seamless scanning, profile sharing, and interaction analytics.
 
 **Key Highlights:**
+
 - Serverless-ready architecture (Google Cloud Run)
 - Full-stack TypeScript application
 - Real-time analytics dashboard
@@ -48,6 +49,7 @@
 ### Purpose
 
 QRAFTY solves the problem of traditional business card limitations by providing:
+
 - **Digital Business Cards**: QR-based profiles that never expire
 - **Interaction Tracking**: Real-time analytics on who scans your code
 - **B2B Marketplace**: Showcase business profiles and services
@@ -134,51 +136,51 @@ QRAFTY solves the problem of traditional business card limitations by providing:
 
 ### Frontend
 
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| **Framework** | React | 19.2.0 | UI components & state management |
-| **Build Tool** | Vite | 7.3.1 | Fast development & optimized builds |
-| **Language** | TypeScript | 5.9.3 | Type safety & developer experience |
-| **Styling** | Tailwind CSS | 4.1.0 | Utility-first CSS framework |
-| **Routing** | React Router | 7.11.x | Client-side navigation |
-| **Authentication** | Clerk | Latest | Third-party auth provider |
-| **HTTP Client** | Fetch API | Native | API communication (custom wrapper) |
-| **QR Generation** | qrcode.react | Latest | QR code rendering |
-| **Charts** | Recharts | Latest | Analytics visualization |
-| **PWA** | Workbox | 7.x | Service worker & offline support |
+| Component          | Technology   | Version | Purpose                             |
+| ------------------ | ------------ | ------- | ----------------------------------- |
+| **Framework**      | React        | 19.2.0  | UI components & state management    |
+| **Build Tool**     | Vite         | 7.3.1   | Fast development & optimized builds |
+| **Language**       | TypeScript   | 5.9.3   | Type safety & developer experience  |
+| **Styling**        | Tailwind CSS | 4.1.0   | Utility-first CSS framework         |
+| **Routing**        | React Router | 7.11.x  | Client-side navigation              |
+| **Authentication** | Clerk        | Latest  | Third-party auth provider           |
+| **HTTP Client**    | Fetch API    | Native  | API communication (custom wrapper)  |
+| **QR Generation**  | qrcode.react | Latest  | QR code rendering                   |
+| **Charts**         | Recharts     | Latest  | Analytics visualization             |
+| **PWA**            | Workbox      | 7.x     | Service worker & offline support    |
 
 ### Backend
 
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| **Runtime** | Node.js | 20.x | JavaScript runtime |
-| **Framework** | Express | 5.1.0 | HTTP server & routing |
-| **Language** | TypeScript | 5.9.3 | Type safety |
-| **Database** | PostgreSQL | 15.x | Relational database |
-| **ORM** | Prisma | 6.16.2 | Database abstraction & migrations |
-| **Authentication** | @clerk/express | 1.7.60 | Clerk middleware |
-| **Validation** | Zod | 4.1.11 | Runtime schema validation |
-| **Password Hashing** | Argon2 | 0.44.0 | Secure password hashing |
-| **CORS** | cors | 2.8.5 | Cross-origin request handling |
-| **Logging** | Morgan | 1.10.1 | HTTP request logging |
-| **Security** | Helmet | 8.1.0 | Security headers |
-| **Rate Limiting** | express-rate-limit | 8.2.1 | API rate limiting |
-| **Env Validation** | dotenv + Zod | Latest | Environment variable management |
+| Component            | Technology         | Version | Purpose                           |
+| -------------------- | ------------------ | ------- | --------------------------------- |
+| **Runtime**          | Node.js            | 20.x    | JavaScript runtime                |
+| **Framework**        | Express            | 5.1.0   | HTTP server & routing             |
+| **Language**         | TypeScript         | 5.9.3   | Type safety                       |
+| **Database**         | PostgreSQL         | 15.x    | Relational database               |
+| **ORM**              | Prisma             | 6.16.2  | Database abstraction & migrations |
+| **Authentication**   | @clerk/express     | 1.7.60  | Clerk middleware                  |
+| **Validation**       | Zod                | 4.1.11  | Runtime schema validation         |
+| **Password Hashing** | Argon2             | 0.44.0  | Secure password hashing           |
+| **CORS**             | cors               | 2.8.5   | Cross-origin request handling     |
+| **Logging**          | Morgan             | 1.10.1  | HTTP request logging              |
+| **Security**         | Helmet             | 8.1.0   | Security headers                  |
+| **Rate Limiting**    | express-rate-limit | 8.2.1   | API rate limiting                 |
+| **Env Validation**   | dotenv + Zod       | Latest  | Environment variable management   |
 
 ### DevOps & Infrastructure
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| **Package Manager** | npm | Dependency management |
-| **Workspaces** | npm workspaces | Monorepo structure |
-| **Version Control** | Git | Source code management |
-| **CI/CD** | GitHub Actions | Automated builds & deployments |
-| **Frontend Hosting** | Vercel | Serverless frontend deployment |
-| **Backend Hosting** | Google Cloud Run | Serverless container deployment |
-| **Database Hosting** | Google Cloud SQL | Managed PostgreSQL database |
-| **Container** | Docker | Application containerization |
-| **Code Quality** | ESLint | Code linting |
-| **Formatting** | Prettier | Code formatting |
+| Component            | Technology       | Purpose                         |
+| -------------------- | ---------------- | ------------------------------- |
+| **Package Manager**  | npm              | Dependency management           |
+| **Workspaces**       | npm workspaces   | Monorepo structure              |
+| **Version Control**  | Git              | Source code management          |
+| **CI/CD**            | GitHub Actions   | Automated builds & deployments  |
+| **Frontend Hosting** | Vercel           | Serverless frontend deployment  |
+| **Backend Hosting**  | Google Cloud Run | Serverless container deployment |
+| **Database Hosting** | Google Cloud SQL | Managed PostgreSQL database     |
+| **Container**        | Docker           | Application containerization    |
+| **Code Quality**     | ESLint           | Code linting                    |
+| **Formatting**       | Prettier         | Code formatting                 |
 
 ---
 
@@ -307,9 +309,11 @@ QRAFTY solves the problem of traditional business card limitations by providing:
 ### Models Description
 
 #### User Model
+
 Represents authenticated users of the platform.
 
 **Fields:**
+
 - `id`: Unique identifier (CUID)
 - `email`: User's email address (unique)
 - `passwordHash`: Bcrypt/Argon2 hashed password (nullable for OAuth users)
@@ -320,13 +324,16 @@ Represents authenticated users of the platform.
 - Timestamps: `createdAt`, `updatedAt`
 
 **Relations:**
+
 - One-to-many with QRCard
 - One-to-many with BusinessProfile
 
 #### QRCard Model
+
 Represents individual QR codes/digital business cards created by users.
 
 **Fields:**
+
 - `id`: Unique identifier (CUID)
 - `userId`: Reference to User (foreign key)
 - `label`: Display name for the QR card
@@ -335,13 +342,16 @@ Represents individual QR codes/digital business cards created by users.
 - Timestamps: `createdAt`, `updatedAt`
 
 **Relations:**
+
 - Many-to-one with User
 - One-to-many with Interaction
 
 #### Interaction Model
+
 Represents events triggered by scanning QR codes or taking actions.
 
 **Fields:**
+
 - `id`: Unique identifier (CUID)
 - `qrCardId`: Reference to QRCard (foreign key)
 - `type`: Enum value (SCAN or CONTACT)
@@ -350,12 +360,15 @@ Represents events triggered by scanning QR codes or taking actions.
 - `referrer`: HTTP referrer header
 
 **Indexes:**
+
 - Composite index on `(qrCardId, occurredAt)` for analytics queries
 
 #### BusinessProfile Model
+
 Represents B2B business profiles for the marketplace.
 
 **Fields:**
+
 - `id`: Unique identifier (CUID)
 - `ownerId`: Reference to User (foreign key)
 - `name`: Business name
@@ -367,6 +380,7 @@ Represents B2B business profiles for the marketplace.
 - Timestamps: `createdAt`, `updatedAt`
 
 **Relations:**
+
 - Many-to-one with User
 
 ---
@@ -381,26 +395,28 @@ Represents B2B business profiles for the marketplace.
 ### Authentication
 
 All authenticated endpoints require:
+
 - Bearer token in `Authorization` header OR
 - Cookie-based session (for same-origin requests)
 
 **Example:**
+
 ```bash
 curl -H "Authorization: Bearer <token>" https://qrafty-api.run.app/api/endpoint
 ```
 
 ### Status Codes
 
-| Code | Meaning |
-|------|---------|
-| 200 | OK - Request successful |
-| 201 | Created - Resource created successfully |
-| 204 | No Content - Request successful, no response body |
-| 400 | Bad Request - Invalid input validation |
-| 401 | Unauthorized - Missing/invalid authentication |
-| 403 | Forbidden - Insufficient permissions |
-| 404 | Not Found - Resource doesn't exist |
-| 500 | Internal Server Error - Server error |
+| Code | Meaning                                           |
+| ---- | ------------------------------------------------- |
+| 200  | OK - Request successful                           |
+| 201  | Created - Resource created successfully           |
+| 204  | No Content - Request successful, no response body |
+| 400  | Bad Request - Invalid input validation            |
+| 401  | Unauthorized - Missing/invalid authentication     |
+| 403  | Forbidden - Insufficient permissions              |
+| 404  | Not Found - Resource doesn't exist                |
+| 500  | Internal Server Error - Server error              |
 
 ### Health Check
 
@@ -414,6 +430,7 @@ Body: OK
 ### Authentication Endpoints
 
 #### Login
+
 ```
 POST /auth/login
 Content-Type: application/json
@@ -435,6 +452,7 @@ Response: 200 OK
 ```
 
 #### Register
+
 ```
 POST /auth/signup
 Content-Type: application/json
@@ -457,6 +475,7 @@ Response: 201 Created
 ```
 
 #### Current User
+
 ```
 GET /auth/me
 Authorization: Bearer <token>
@@ -476,6 +495,7 @@ Response: 200 OK
 ```
 
 #### Logout
+
 ```
 POST /auth/logout
 Authorization: Bearer <token>
@@ -484,6 +504,7 @@ Response: 204 No Content
 ```
 
 #### Debug Auth (Development)
+
 ```
 GET /auth/debug
 Authorization: Bearer <token>
@@ -499,6 +520,7 @@ Response: 200 OK
 ### QR Card Endpoints
 
 #### Get User's QR Cards
+
 ```
 GET /qr-cards
 Authorization: Bearer <token>
@@ -519,6 +541,7 @@ Response: 200 OK
 ```
 
 #### Create QR Card
+
 ```
 POST /qr-cards
 Authorization: Bearer <token>
@@ -539,6 +562,7 @@ Response: 201 Created
 ```
 
 #### Update QR Card
+
 ```
 PATCH /qr-cards/:id
 Authorization: Bearer <token>
@@ -560,6 +584,7 @@ Response: 200 OK
 ```
 
 #### Delete QR Card
+
 ```
 DELETE /qr-cards/:id
 Authorization: Bearer <token>
@@ -570,6 +595,7 @@ Response: 204 No Content
 ### Public QR Profile Endpoints
 
 #### Get QR Profile
+
 ```
 GET /public/qr/:publicId
 
@@ -594,6 +620,7 @@ Response: 200 OK
 ```
 
 #### Log Contact Interaction
+
 ```
 POST /public/qr/:publicId/contact
 Content-Type: application/json
@@ -615,6 +642,7 @@ Response: 201 Created
 ### Analytics Endpoints
 
 #### Get Analytics Summary
+
 ```
 GET /analytics/summary
 Authorization: Bearer <token>
@@ -629,6 +657,7 @@ Response: 200 OK
 ```
 
 #### Get Detailed Analytics
+
 ```
 GET /analytics/interactions?qrCardId=card-id&limit=50&offset=0
 Authorization: Bearer <token>
@@ -653,6 +682,7 @@ Response: 200 OK
 ### Business Profile Endpoints
 
 #### List Business Profiles (Marketplace)
+
 ```
 GET /marketplace
 ?search=&industry=&location=&limit=20&offset=0
@@ -675,6 +705,7 @@ Response: 200 OK
 ```
 
 #### Get Business Profile
+
 ```
 GET /marketplace/:id
 Authorization: Bearer <token>
@@ -700,6 +731,7 @@ Response: 200 OK
 ```
 
 #### Create Business Profile
+
 ```
 POST /marketplace/me
 Authorization: Bearer <token>
@@ -725,6 +757,7 @@ Response: 201 Created
 ```
 
 #### Update Business Profile
+
 ```
 PATCH /marketplace/me/:id
 Authorization: Bearer <token>
@@ -742,6 +775,7 @@ Response: 200 OK
 ```
 
 #### Delete Business Profile
+
 ```
 DELETE /marketplace/me/:id
 Authorization: Bearer <token>
@@ -782,6 +816,7 @@ Backend middleware validates JWT
 QRAFTY uses **Clerk** for enterprise-grade authentication:
 
 **Features:**
+
 - Email/password authentication
 - Google OAuth 2.0
 - Multi-factor authentication (optional)
@@ -789,6 +824,7 @@ QRAFTY uses **Clerk** for enterprise-grade authentication:
 - User management dashboard
 
 **Frontend Integration:**
+
 ```typescript
 // Use Clerk's useAuth hook
 const { userId, getToken } = useAuth();
@@ -798,6 +834,7 @@ const token = await getToken();
 ```
 
 **Backend Verification:**
+
 ```typescript
 // Middleware validates Clerk tokens
 app.use(clerkMiddleware());
@@ -851,6 +888,7 @@ CORS allowed origins (configurable):
 ### Environment Variables
 
 Sensitive configuration stored in environment:
+
 - `CLERK_SECRET_KEY` - Clerk API secret
 - `DATABASE_URL` - Database connection string
 - `JWT_SECRET` - JWT signing key
@@ -865,6 +903,7 @@ Sensitive configuration stored in environment:
 See `CLOUD_RUN_SETUP.md` for detailed instructions.
 
 **Quick Summary:**
+
 ```bash
 # 1. Create Cloud SQL database
 gcloud sql instances create qrafty-db --database-version=POSTGRES_15
@@ -880,6 +919,7 @@ gcloud run deploy qrafty-api \
 ```
 
 **Free Tier Includes:**
+
 - 2M API requests/month
 - 1 shared PostgreSQL instance
 - 360,000 vCPU-seconds/month
@@ -948,6 +988,7 @@ docker compose up -d
 ```
 
 Verify connection:
+
 ```bash
 psql postgresql://dev:dev@localhost:5432/qrafty_dev
 ```
@@ -955,6 +996,7 @@ psql postgresql://dev:dev@localhost:5432/qrafty_dev
 #### 4. Configure Environment Variables
 
 **Backend** (`backend/api/.env`):
+
 ```env
 DATABASE_URL="postgresql://dev:dev@localhost:5432/qrafty_dev"
 SHADOW_DATABASE_URL="postgresql://dev:dev@localhost:5432/qrafty_dev_shadow"
@@ -967,6 +1009,7 @@ WEB_ORIGIN="http://localhost:5173"
 ```
 
 **Frontend** (`frontend/web/.env`):
+
 ```env
 VITE_CLERK_PUBLISHABLE_KEY="your-clerk-publishable-key"
 VITE_API_URL="http://localhost:4000"
@@ -987,6 +1030,7 @@ npm run dev
 This starts both frontend (http://localhost:5173) and backend (http://localhost:4000) concurrently.
 
 Or run separately:
+
 ```bash
 npm run dev:web    # Frontend only
 npm run dev:api    # Backend only
@@ -1124,6 +1168,7 @@ qrafty-web/
 ### Frontend Performance
 
 **Optimization Techniques:**
+
 - Code splitting with React Router lazy loading
 - Vite's aggressive bundling and tree-shaking
 - Image optimization with Next.js Image (optional upgrade)
@@ -1132,6 +1177,7 @@ qrafty-web/
 - Gzip compression on Vercel
 
 **Metrics:**
+
 - **LCP** (Largest Contentful Paint): < 2.5s
 - **FID** (First Input Delay): < 100ms
 - **CLS** (Cumulative Layout Shift): < 0.1
@@ -1140,6 +1186,7 @@ qrafty-web/
 ### Backend Performance
 
 **Optimization Techniques:**
+
 - Connection pooling for database
 - Redis caching (future implementation)
 - Query optimization with Prisma
@@ -1148,6 +1195,7 @@ qrafty-web/
 - Gzip middleware compression
 
 **Metrics:**
+
 - **Response Time**: < 100ms (p95)
 - **Throughput**: 1000+ requests/second
 - **Database**: Optimized for scan-heavy analytics
@@ -1155,16 +1203,19 @@ qrafty-web/
 ### Scalability Strategy
 
 **Horizontal Scaling:**
+
 - Stateless API (Cloud Run auto-scales)
 - Database connection pooling
 - CDN for static assets (Vercel)
 
 **Vertical Scaling:**
+
 - Increase Cloud Run memory (if needed)
 - Upgrade Cloud SQL tier
 - Add read replicas for reporting
 
 **Future Optimizations:**
+
 - Redis cache layer
 - GraphQL for efficient data queries
 - Elasticsearch for full-text search
@@ -1176,18 +1227,18 @@ qrafty-web/
 
 ### OWASP Top 10 Coverage
 
-| Vulnerability | Mitigation |
-|---------------|-----------|
-| Injection | Parameterized queries via Prisma ORM |
-| Broken Auth | Clerk + JWT + Argon2 hashing |
-| Sensitive Data Exposure | HTTPS/TLS, encrypted passwords, no logs |
-| XML External Entities | Not applicable (JSON only) |
-| Broken Access Control | Role-based middleware (future) |
-| Security Misconfiguration | Helmet.js security headers |
-| XSS | React escaping + CSP headers |
-| Insecure Deserialization | Zod schema validation |
-| Using Known Vulnerabilities | Dependabot + npm audit |
-| Insufficient Logging | Morgan + structured logging |
+| Vulnerability               | Mitigation                              |
+| --------------------------- | --------------------------------------- |
+| Injection                   | Parameterized queries via Prisma ORM    |
+| Broken Auth                 | Clerk + JWT + Argon2 hashing            |
+| Sensitive Data Exposure     | HTTPS/TLS, encrypted passwords, no logs |
+| XML External Entities       | Not applicable (JSON only)              |
+| Broken Access Control       | Role-based middleware (future)          |
+| Security Misconfiguration   | Helmet.js security headers              |
+| XSS                         | React escaping + CSP headers            |
+| Insecure Deserialization    | Zod schema validation                   |
+| Using Known Vulnerabilities | Dependabot + npm audit                  |
+| Insufficient Logging        | Morgan + structured logging             |
 
 ### Checklist for Production
 
@@ -1229,12 +1280,14 @@ npm audit --audit-level=moderate
 ### Application Logging
 
 **Frontend Logging:**
+
 ```typescript
 // Use console with structured format
-console.log('event', { userId, action, timestamp });
+console.log("event", { userId, action, timestamp });
 ```
 
 **Backend Logging (Morgan):**
+
 ```
 GET /api/qr-cards 200 45ms - 2.5kb
 POST /auth/login 201 123ms - 1.2kb
@@ -1246,16 +1299,19 @@ All errors logged with stack traces (never user-sensitive data).
 ### Monitoring Tools
 
 **Google Cloud Run:**
+
 - Built-in metrics dashboard
 - Custom metrics via Cloud Monitoring
 - Log streaming to Cloud Logging
 
 **Vercel:**
+
 - Real User Monitoring (RUM)
 - Performance metrics
 - Error tracking
 
 **Optional Third-Party:**
+
 - **Sentry**: Error tracking
 - **DataDog**: Application performance
 - **PagerDuty**: Incident alerting
@@ -1282,19 +1338,23 @@ Frontend:
 ### Setting Up Monitoring
 
 **Cloud Run Logging:**
+
 ```bash
 gcloud run logs read qrafty-api --region us-central1
 gcloud run logs read qrafty-api --region us-central1 --limit 100
 ```
 
 **Custom Metrics:**
+
 ```typescript
 // Example in backend
 app.use((req, res, next) => {
   const start = Date.now();
-  res.on('finish', () => {
+  res.on("finish", () => {
     const duration = Date.now() - start;
-    console.log(`${req.method} ${req.path} - ${res.statusCode} - ${duration}ms`);
+    console.log(
+      `${req.method} ${req.path} - ${res.statusCode} - ${duration}ms`,
+    );
   });
   next();
 });
@@ -1309,11 +1369,13 @@ app.use((req, res, next) => {
 #### Issue: "Can't reach database server"
 
 **Symptoms:**
+
 ```
 Error: P1001: Can't reach database server at `localhost:5432`
 ```
 
 **Solutions:**
+
 1. Check Docker is running: `docker ps`
 2. Verify database exists: `psql -l`
 3. Check connection string in `.env`
@@ -1322,11 +1384,13 @@ Error: P1001: Can't reach database server at `localhost:5432`
 #### Issue: "Port already in use"
 
 **Symptoms:**
+
 ```
 Error: EADDRINUSE: address already in use :::4000
 ```
 
 **Solutions:**
+
 ```bash
 # Find process using port
 lsof -i :4000
@@ -1341,11 +1405,13 @@ PORT=4001 npm run dev:api
 #### Issue: "Module not found"
 
 **Symptoms:**
+
 ```
 Error: Cannot find module '@prisma/client'
 ```
 
 **Solutions:**
+
 ```bash
 # Regenerate Prisma client
 npx prisma generate
@@ -1357,11 +1423,13 @@ rm -rf node_modules && npm install
 #### Issue: "Authentication failed"
 
 **Symptoms:**
+
 ```
 401 Unauthorized
 ```
 
 **Solutions:**
+
 1. Check Clerk keys are correct in `.env`
 2. Verify Clerk dashboard settings
 3. Check frontend is sending token: `Authorization: Bearer <token>`
@@ -1370,11 +1438,13 @@ rm -rf node_modules && npm install
 #### Issue: "Prisma migration conflict"
 
 **Symptoms:**
+
 ```
 Error: Migration lock is being held...
 ```
 
 **Solutions:**
+
 ```bash
 # Force release lock
 npx prisma migrate resolve --rolled-back <migration-name>
@@ -1386,11 +1456,13 @@ npx prisma migrate reset
 #### Issue: "CORS error in browser"
 
 **Symptoms:**
+
 ```
 Access to XMLHttpRequest blocked by CORS policy
 ```
 
 **Solutions:**
+
 1. Check `WEB_ORIGIN` in backend `.env`
 2. Verify frontend URL matches
 3. Check CORS middleware in `index.ts`
@@ -1399,12 +1471,14 @@ Access to XMLHttpRequest blocked by CORS policy
 #### Issue: "Build fails on GitHub Actions"
 
 **Symptoms:**
+
 ```
 npm error npm ERR! code 1
 npm error ERR! Failed to build
 ```
 
 **Solutions:**
+
 1. Check logs: `git push && watch logs`
 2. Reinstall lock file: `rm package-lock.json && npm install`
 3. Clear GitHub Actions cache
@@ -1453,6 +1527,7 @@ node -e "require('dotenv').config(); console.log(process.env)"
 ### Phase 2 (Q2 2026)
 
 **Features:**
+
 - [ ] Direct messaging between users
 - [ ] Business ratings and reviews
 - [ ] Advanced analytics (geographic heat maps)
@@ -1461,6 +1536,7 @@ node -e "require('dotenv').config(); console.log(process.env)"
 - [ ] SMS integration
 
 **Infrastructure:**
+
 - [ ] Redis caching layer
 - [ ] GraphQL API option
 - [ ] Elasticsearch for search
@@ -1469,6 +1545,7 @@ node -e "require('dotenv').config(); console.log(process.env)"
 ### Phase 3 (Q3 2026)
 
 **Features:**
+
 - [ ] Mobile app (React Native)
 - [ ] QR code customization (colors, logos)
 - [ ] Payment integration (Stripe)
@@ -1477,6 +1554,7 @@ node -e "require('dotenv').config(); console.log(process.env)"
 - [ ] White-label option
 
 **Infrastructure:**
+
 - [ ] Multi-region deployment
 - [ ] Database read replicas
 - [ ] Automated backups to S3
@@ -1485,6 +1563,7 @@ node -e "require('dotenv').config(); console.log(process.env)"
 ### Phase 4 (Q4 2026+)
 
 **Features:**
+
 - [ ] AI-powered profile recommendations
 - [ ] Integration with CRM systems
 - [ ] Advanced reporting and export
@@ -1493,6 +1572,7 @@ node -e "require('dotenv').config(); console.log(process.env)"
 - [ ] Accessibility improvements (WCAG AA)
 
 **Infrastructure:**
+
 - [ ] Kubernetes deployment
 - [ ] Microservices architecture (if needed)
 - [ ] Event-driven architecture
@@ -1574,6 +1654,7 @@ npm install
 ### C. Database Query Examples
 
 **Get user with QR cards:**
+
 ```sql
 SELECT u.*, COUNT(q.id) as card_count
 FROM "User" u
@@ -1583,8 +1664,9 @@ GROUP BY u.id;
 ```
 
 **Get scan analytics:**
+
 ```sql
-SELECT 
+SELECT
   DATE(i."occurredAt") as date,
   COUNT(*) as scans,
   COUNT(DISTINCT i."qrCardId") as cards_scanned
@@ -1596,8 +1678,9 @@ ORDER BY date DESC;
 ```
 
 **Get top referring domains:**
+
 ```sql
-SELECT 
+SELECT
   i."referrer",
   COUNT(*) as count
 FROM "Interaction" i
