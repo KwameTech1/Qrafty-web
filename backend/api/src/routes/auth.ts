@@ -418,6 +418,25 @@ function publicUser(user: {
 export function authRouter(env: Env) {
   const router = Router();
 
+  // Debug endpoint to diagnose authentication issues.
+  // Safe to call from browser; returns only header/cookie presence and clerk user id presence.
+  router.get("/debug", (req, res) => {
+    try {
+      const hasAuthHeader = Boolean(req.headers.authorization);
+      const cookieNames = Object.keys((req as any).cookies ?? {});
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const { getAuth } = require("@clerk/express");
+      const auth = getAuth(req as any);
+      const clerkUserIdPresent = Boolean(auth?.userId);
+
+      return res.json({ hasAuthHeader, cookieNames, clerkUserIdPresent });
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("/auth/debug error", err);
+      return res.status(500).json({ error: "debug error" });
+    }
+  });
+
   router.get("/me", async (req, res) => {
     res.setHeader("cache-control", "no-store");
     res.setHeader("pragma", "no-cache");
