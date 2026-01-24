@@ -87,6 +87,7 @@ gcloud run deploy qrafty-api \
 ```
 
 Replace placeholders:
+
 - `PASSWORD`: Your chosen database password
 - `YOUR_CLERK_KEY`: Your Clerk secret key
 - `YOUR_CLERK_PUBLISHABLE_KEY`: Your Clerk publishable key
@@ -124,11 +125,13 @@ gcloud run describe qrafty-api --region us-central1
 ## Cost Breakdown (Free Tier)
 
 **Cloud Run**:
+
 - 2,000,000 requests/month free ✅
 - 360,000 vCPU-seconds/month free
 - 180,000 GiB-seconds/month free
 
 **Cloud SQL**:
+
 - 1 shared PostgreSQL instance free ✅
 - Up to 10 GB storage free
 - 100 connections
@@ -138,6 +141,7 @@ gcloud run describe qrafty-api --region us-central1
 ## Scaling Notes
 
 Cloud Run automatically scales from 0 to your specified limits:
+
 - Cold starts: ~1-2 seconds (acceptable for hobby project)
 - Auto-scales under load
 - Pay only for what you use
@@ -152,6 +156,7 @@ Cloud Run automatically scales from 0 to your specified limits:
 ## Troubleshooting
 
 **Database connection fails**:
+
 ```bash
 # Check Cloud SQL instance is running
 gcloud sql instances describe qrafty-db
@@ -161,11 +166,13 @@ gcloud projects get-iam-policy qrafty-api
 ```
 
 **Migrations not running**:
+
 - Check logs: `gcloud run logs read qrafty-api`
 - Ensure `DATABASE_URL` is correct
 - Verify database user password is correct
 
 **Service account permission errors**:
+
 ```bash
 gcloud projects get-iam-policy qrafty-api \
   --flatten="bindings[].members" \
