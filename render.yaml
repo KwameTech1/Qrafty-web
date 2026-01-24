@@ -5,8 +5,7 @@ services:
     rootDir: .
     plan: starter
     buildCommand: npm ci --include=dev --workspaces --include-workspace-root && npm run prisma:generate -w api && npm run build -w api
-    preDeployCommand: npm run prisma:migrate:deploy -w api
-    startCommand: npm run start -w api
+    startCommand: npm run prisma:migrate:deploy -w api && npm run start -w api
     healthCheckPath: /health
     envVars:
       - key: NODE_ENV
