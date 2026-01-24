@@ -75,7 +75,9 @@ export function qrCardsRouter(env: Env) {
       if (!parsed.success)
         return res.status(400).json({ error: "Invalid input" });
 
-      const id = req.params.id;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
 
       const existing = await prisma.qRCard.findFirst({ where: { id, userId } });
       if (!existing) return res.status(404).json({ error: "Not found" });
@@ -101,7 +103,7 @@ export function qrCardsRouter(env: Env) {
       });
 
       return res.json({ item: card });
-    }
+    },
   );
 
   router.delete(
@@ -109,14 +111,16 @@ export function qrCardsRouter(env: Env) {
     requireAuth(env),
     async (req: Request, res: Response) => {
       const userId = (req as AuthenticatedRequest).userId;
-      const id = req.params.id;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
 
       const existing = await prisma.qRCard.findFirst({ where: { id, userId } });
       if (!existing) return res.status(404).json({ error: "Not found" });
 
       await prisma.qRCard.delete({ where: { id } });
       return res.status(204).send();
-    }
+    },
   );
 
   return router;

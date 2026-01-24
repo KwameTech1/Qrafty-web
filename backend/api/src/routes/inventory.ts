@@ -95,7 +95,9 @@ export function inventoryRouter(env: Env) {
     requireAuth(env),
     async (req: Request, res: Response) => {
       const userId = (req as AuthenticatedRequest).userId;
-      const { id } = req.params;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
       const { label, isActive } = req.body;
 
       // Validate input
@@ -140,7 +142,9 @@ export function inventoryRouter(env: Env) {
     requireAuth(env),
     async (req: Request, res: Response) => {
       const userId = (req as AuthenticatedRequest).userId;
-      const { id } = req.params;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
       try {
         const card = await prisma.qRCard.findUnique({ where: { id } });
         if (!card || card.userId !== userId) {

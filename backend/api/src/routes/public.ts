@@ -8,15 +8,13 @@ export function publicRouter() {
 
   // Public QR profile endpoint. Used by the QR itself and by the web public page.
   router.get("/qr/:publicId", async (req: Request, res: Response) => {
-    const publicId = req.params.publicId;
+    const publicId = Array.isArray(req.params.publicId)
+      ? req.params.publicId[0]
+      : req.params.publicId;
 
     const qrCard = await prisma.qRCard.findUnique({
       where: { publicId },
-      select: {
-        id: true,
-        label: true,
-        publicId: true,
-        isActive: true,
+      include: {
         user: {
           select: {
             id: true,
@@ -63,7 +61,9 @@ export function publicRouter() {
 
   // Log a CONTACT interaction when a visitor taps the Contact CTA.
   router.post("/qr/:publicId/contact", async (req: Request, res: Response) => {
-    const publicId = req.params.publicId;
+    const publicId = Array.isArray(req.params.publicId)
+      ? req.params.publicId[0]
+      : req.params.publicId;
 
     const qrCard = await prisma.qRCard.findUnique({
       where: { publicId },

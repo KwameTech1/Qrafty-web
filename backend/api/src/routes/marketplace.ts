@@ -131,7 +131,7 @@ export function marketplaceRouter(env: Env) {
         items.length > limit ? page[page.length - 1]?.id : null;
 
       return res.json({ items: page, nextCursor });
-    }
+    },
   );
 
   // Business profile detail page.
@@ -139,7 +139,9 @@ export function marketplaceRouter(env: Env) {
     "/businesses/:id",
     requireAuth(env),
     async (req: Request, res: Response) => {
-      const id = req.params.id;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
 
       const item = await prisma.businessProfile.findUnique({
         where: { id },
@@ -159,7 +161,7 @@ export function marketplaceRouter(env: Env) {
 
       if (!item) return res.status(404).json({ error: "Not found" });
       return res.json({ item });
-    }
+    },
   );
 
   // Current user's business profile (single-profile UX).
@@ -224,7 +226,9 @@ export function marketplaceRouter(env: Env) {
     requireAuth(env),
     async (req: Request, res: Response) => {
       const userId = (req as AuthenticatedRequest).userId;
-      const id = req.params.id;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
 
       const parsed = profileSchema.partial().safeParse(req.body);
       if (!parsed.success) {
@@ -272,7 +276,7 @@ export function marketplaceRouter(env: Env) {
       });
 
       return res.json({ item });
-    }
+    },
   );
 
   router.delete(
@@ -280,7 +284,9 @@ export function marketplaceRouter(env: Env) {
     requireAuth(env),
     async (req: Request, res: Response) => {
       const userId = (req as AuthenticatedRequest).userId;
-      const id = req.params.id;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
 
       const existing = await prisma.businessProfile.findUnique({
         where: { id },
@@ -291,7 +297,7 @@ export function marketplaceRouter(env: Env) {
 
       await prisma.businessProfile.delete({ where: { id } });
       return res.status(204).send();
-    }
+    },
   );
 
   return router;
